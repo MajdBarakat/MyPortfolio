@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@font-face {
+    src: url(assets/fonts/RoseVelt.ttf);
+    font-family: RoseVelt;
+}
+body{ 
+    background-color: #63768D;
+    height: 2000px;
+}
+p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+/* Front Page Styles */
+#logoContainer{
+    position: absolute;
+    max-width: 774px;
+    max-height: 774px;
+    left: calc(50% - 774px/2);
+    top: calc(50% - 774px/2 - 86px);
+    z-index: -1;
+
+}
+#majdBarakat{
+    position: absolute;
+    width: 939px;
+    height: 157px;
+    /* left: calc(50% - 939px/2 - 0.5px);
+    top: calc(50% - 157px/2 + 184.5px); */
+}
+#portfolio{
+    position: absolute;
+    width: 317px;
+    height: 43px;
+    left: calc(50% - 317px/2 - 171.5px);
+    top: calc(50% - 43px/2 + 337.5px);
+}
+#contact{
+    position: absolute;
+    width: 261px;
+    height: 43px;
+    left: calc(50% - 261px/2 + 210.5px);
+    top: calc(50% - 43px/2 + 337.5px);
+}
+h1{
+    font-family: 'RoseVelt';
+    font-weight: 300;
+    font-size: 150px;
+    color: white;
+    margin: 0px;
+}
