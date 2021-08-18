@@ -1,52 +1,184 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
 @font-face {
     src: url(assets/fonts/RoseVelt.ttf);
     font-family: RoseVelt;
 }
-body{ 
-    background-color: #63768D;
-    height: 2000px;
+a{
+    text-decoration: none;
+    color: white;
 }
 p{
     font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
-}
-/* Front Page Styles */
-#logoContainer{
-    position: absolute;
-    max-width: 774px;
-    max-height: 774px;
-    left: calc(50% - 774px/2);
-    top: calc(50% - 774px/2 - 86px);
-    z-index: -1;
-
-}
-#majdBarakat{
-    position: absolute;
-    width: 939px;
-    height: 157px;
-    /* left: calc(50% - 939px/2 - 0.5px);
-    top: calc(50% - 157px/2 + 184.5px); */
-}
-#portfolio{
-    position: absolute;
-    width: 317px;
-    height: 43px;
-    left: calc(50% - 317px/2 - 171.5px);
-    top: calc(50% - 43px/2 + 337.5px);
-}
-#contact{
-    position: absolute;
-    width: 261px;
-    height: 43px;
-    left: calc(50% - 261px/2 + 210.5px);
-    top: calc(50% - 43px/2 + 337.5px);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.3em;
 }
 h1{
     font-family: 'RoseVelt';
     font-weight: 300;
-    font-size: 150px;
     color: white;
     margin: 0px;
+    z-index: 1;
+}
+h2{
+    font-family: 'RoseVelt';
+    font-weight: 300;
+    font-size: 50px;
+    color: white;
+    margin: 0px;
+    letter-spacing: 10px;
+    position:absolute;
+    z-index: 2;
+}
+h3{
+    font-family: 'Roboto';
+    font-weight: 300;
+    margin:0;
+    letter-spacing: 5px;
+}
+h4{
+    font-family: 'Roboto';
+    font-weight: 100;
+    margin:0;
+    letter-spacing: 10px;
+    font-size: 64px;
+    color: white;
+ 
+}
+h5{
+    font-family: 'Roboto';
+    font-weight: bold;
+    margin:0;
+    letter-spacing: 5px;
+    font-size: 64px;
+    color:#A61C3C;
+}
+/* util                 ---------------------*/
+.nav-container{
+    margin: auto;
+    max-width: 1920px;
+    overflow: auto;
+    padding: 0 20px;
+}
+body.index{ 
+    background-color: #2C3C51;
+    margin: 0;
+}
+.container{
+    z-index: 1;
+    display: flex;
+    position: absolute;
+    width: 972px;
+    height: 308px;
+    left: calc(50% - 972px/2 - 17px);
+    top: calc(50% - 308px/2 + 248px);
+    overflow:unset; 
+    justify-content: center;
+}
+.logo{
+    height: 800px;
+    width: 800px;
+    background: url(assets/faded_logo.png) no-repeat;
+    background-position: top center;
+    background-size: contain;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: -1;
+}
+.portfolio{
+    align-self: flex-end;
+    margin-right: 50%;
+    margin-bottom: 2%;
+}
+.contact{
+    align-self:flex-end;
+    margin-left: 50%;
+    margin-bottom: 2%;
+}
+.majdBarakat{
+    font-size: 155px;
+}
+
+/* Main Page Styles ---------------------------------------*/
+
+body.main{ 
+    background-color: #63768D;
+    margin: 0;
+}
+.logo-small{
+    width: 115px;
+    float:left;
+}
+.navbar{
+    background: #2C3C51;
+    color: white;
+    overflow:auto;
+}
+
+.navbar ul{
+    list-style: none;
+    margin: 0;
+    float:right
+}
+.small-name{
+    float:left;
+    font-size: 50px;
+    margin-top: 0.8em;
+}
+
+.navbar li{
+    float:left;
+    font-size: 16px;
+    cursor: pointer;
+}
+.navbar li a {
+    display: block;
+    margin: 40px;
+    padding: 10px 8px 10px 13px;
+    border-right-width: 0;
+    border-left-width:0;
+    border-top-width: 2px ;
+    border-bottom-width: 2px ;
+    border-style:solid;
+    border-color: transparent;
+}
+.navbar li:hover{
+    border-color: #A61C3C;
+    background:#A61C3C;
+}
+
+.navbar li a.current{
+    border-style: solid;
+    border-color:white;
+    color: #f1Bf98;
+}
+
+.project-content{
+    padding: 10px;
+    background: #8899AE;
+    display:block;
+    max-width: 420px;
+    min-height: 1000px;
+    float: left;
+    margin:80px 80px;
+}
+.project{
+    margin: 20px 43px 90px 43px;
+}
+.project-name{
+    z-index: 20;
+    position: absolute;
+    margin-top: 42px;
+    margin-left: 70px;
+}
+.project-no{
+    z-index: 21;
+    position: absolute;
+    margin-top: 70px;
+    margin-left: 350px;
+}
+.project-details{
+    color: white;
+    font-weight: 300;
 }
