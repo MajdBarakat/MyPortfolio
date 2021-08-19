@@ -105,6 +105,7 @@ body.index{
 body.main{ 
     background-color: #63768D;
     margin: 0;
+    height: 3500px;
 }
 .logo-small{
     width: 115px;
@@ -153,7 +154,6 @@ body.main{
     border-color:white;
     color: #f1Bf98;
 }
-
 .project-content{
     padding: 10px;
     background: #8899AE;
@@ -161,7 +161,7 @@ body.main{
     max-width: 420px;
     min-height: 1000px;
     float: left;
-    margin:80px 80px;
+    margin:80px 0 0 15%;
 }
 .project{
     margin: 20px 43px 90px 43px;
@@ -182,3 +182,46 @@ body.main{
     color: white;
     font-weight: 300;
 }
+.project-img{
+    background: url(assets/stock-image1.jpg) no-repeat center center;
+    background-size: cover;
+    float:right;
+    width: 700px;
+    height: 800px;
+    margin: 220px 15% 0 0;
+    display: flex;
+}
+.project-img-bgd{
+    width: 700px;
+    height: 800px;
+    position: absolute;
+    background: #A61C3C;
+    margin: 30px -30px;
+    z-index: -2;
+    opacity: 0.5;
+}
+.btn{
+    background-color: #63768D;
+    color: white;
+    opacity: 0.8;
+    padding: 20px 30px;
+    align-self: flex-end;
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+.image-scroller{
+    background-color: #2C3C51;
+    display: flex;
+    justify-content:space-evenly;
+    justify-self: flex-end;
+    flex-direction: row;
+}
+.img-no{
+    margin: 0;
+    
+}
+
+
+
