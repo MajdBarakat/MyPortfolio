@@ -1,0 +1,276 @@
+* {
+  box-sizing:border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: gray;
+}
+h1{
+  margin: 0;
+  text-align: center;
+}
+ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+
+.navbar{
+  background: #141313;
+  overflow: auto;
+  display: block;
+}
+.navbar ul{
+  float:right;
+}
+.logo{
+  color: white;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 2em;
+  margin: 0.75em;
+  display:inline-block;
+}
+.navbar ul li {
+  float: left;
+}
+.navbar ul li a{
+  display: block;
+  color: white;
+  padding: 2em;
+  font-weight: 800;
+}
+.navbar ul li a.current{
+  color: #141313;
+  background: rgba(255, 255, 255, 0.6) ;
+}
+.navbar ul li a:hover{
+  color:orange;
+  background: rgba(255, 255, 255, 0.2) ;
+}
+.nav-container{
+  max-width: 1920px;
+  overflow: auto;
+  margin: auto;
+  padding: 0 1em;
+}
+.burger{
+  float: right;
+  margin: 25px;
+  display: none;
+  cursor: pointer;
+  background-color: transparent;
+  border-color: transparent;
+}
+.burger div{
+  width: 2rem;
+  height: 0.2rem;
+  background: white;
+  margin: 7px;
+  border-radius: 0.5rem;
+}
+
+.burger:hover .line{
+  background: orange ;
+}
+
+.logo:hover{
+  color: orange;
+}
+
+@media screen and (max-width:860px) {
+  /* .nav-container{
+    padding: 0 0 1em 0;
+  }
+  .logo{
+    width: 50%;
+    text-align: center; 
+  }
+  .navbar ul{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .navbar ul li{
+    width: 100%;
+    text-align: center;
+  }
+  .navbar ul li a{
+    border-style: solid;
+    border-width: 0 0 0 0;
+    border-bottom-width: 0.2em;
+    border-color:rgba(255, 255, 255, 0.2);
+  } */
+  .nav-ul{
+    display: none;
+  }
+  .burger{
+    display: block;
+  }
+}
+
+.welcome-img{
+  background: url(stockfoto.jpg)no-repeat center top/cover;
+  width: 100%;
+  min-height: 300px;
+  margin: 0 auto;
+}
+.welcome-container{
+background-color: rgba(0, 0, 0, 0.8);
+min-height: 300px;
+padding: 12%;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.welcome-container h1{
+  margin-bottom: 0.5em;
+  text-align: center;
+  color: white;
+  
+}
+.welcome-container a{
+  padding: 1em 1.5em;
+  text-align: center;
+  color: black;
+  text-decoration: none;
+  background-color: white;
+  font-weight: 800;
+}
+.intro-container {
+  background: #1f1e1e;
+  color: white;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2em;
+  min-height: 300px;
+  overflow: auto;
+  display:block
+}
+.container h1{
+  text-align: center;
+}
+.intro-content{
+  max-width: 1800px;
+  overflow: auto;
+  margin: auto;
+  padding: 0 1em;
+}
+
+@media (min-width: 1000px){
+  .intro-content{
+    display: flex;
+    gap: 1em;
+    text-align: center;
+  }
+}
+.welcome-container a:hover{
+  opacity: 0.8;
+}
+.info-container{
+  background: #141313;
+  display: flex;
+}
+.info-content{
+  width: 50%;
+  padding: 2em;
+}
+.info-content h1{
+  color: white;
+  text-align: start;
+}
+.info-content p{
+  color: white;
+}
+.info-img{
+  background: url(stockfoto.jpg)no-repeat center center/cover;
+  width: 50%;
+  min-height: 30em;
+}
+
+@media (max-width:860px){
+  .info-img{
+    width: 100%;
+    display: flow-root list-item;
+    min-height: 15em;
+  }
+  .info-content{
+    width: 100%;
+    display: inline-block;
+  }
+  .info-container{
+    flex-direction: column;
+  }
+}
+
+.footer-container{
+  background: #1f1e1e;
+}
+
+.footer-container .logo{
+  margin: 0.5em 0 ;
+  width: 100%;
+  text-align: center;
+}
+
+.socialmedia{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+.socialmedia div{
+    width: 25px;
+  height:25px;
+  cursor: pointer;
+}
+
+.facebook{
+  background: url(facebook.png)no-repeat center center/cover;
+}
+
+.twitter{
+  background: url(twitter.png)no-repeat center center/cover;
+}
+
+.instagram{
+  background: url(instagram.png)no-repeat center center/cover;
+}
+
+.socialmedia div:hover{
+  opacity: 0.5;
+}
+
+.footer-container ul{
+  display: flex;
+  justify-content:center;
+}
+
+.footer-container ul li{
+  padding: 1em;
+}
+.footer-container ul li a{
+  color: white;
+  font-weight: bolder;
+}
+.footer-container ul li a:hover{
+  color: orange;
+}
+
+.copyright{
+background: #141313;
+}
+.copyright h2{
+  color: white;
+  font-size: small;
+  text-align: center;
+  font-weight: 100;
+  margin: 0%;
+  padding: 0.8em;
+}
