@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
 @font-face {
     src: url(assets/fonts/RoseVelt.ttf);
     font-family: RoseVelt;
 }
+
 a{
     text-decoration: none;
     color: white;
@@ -102,58 +104,7 @@ body.index{
 
 /* Main Page Styles ---------------------------------------*/
 
-body.main{ 
-    background-color: #63768D;
-    margin: 0;
-    height: 3500px;
-}
-.logo-small{
-    width: 115px;
-    float:left;
-}
-.navbar{
-    background: #2C3C51;
-    color: white;
-    overflow:auto;
-}
 
-.navbar ul{
-    list-style: none;
-    margin: 0;
-    float:right
-}
-.small-name{
-    float:left;
-    font-size: 50px;
-    margin-top: 0.8em;
-}
-
-.navbar li{
-    float:left;
-    font-size: 16px;
-    cursor: pointer;
-}
-.navbar li a {
-    display: block;
-    margin: 40px;
-    padding: 10px 8px 10px 13px;
-    border-right-width: 0;
-    border-left-width:0;
-    border-top-width: 2px ;
-    border-bottom-width: 2px ;
-    border-style:solid;
-    border-color: transparent;
-}
-.navbar li:hover{
-    border-color: #A61C3C;
-    background:#A61C3C;
-}
-
-.navbar li a.current{
-    border-style: solid;
-    border-color:white;
-    color: #f1Bf98;
-}
 .project-content{
     padding: 10px;
     background: #8899AE;
