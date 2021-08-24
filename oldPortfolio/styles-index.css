@@ -1,0 +1,69 @@
+@font-face {
+    src: url(assets/fonts/RoseVelt.ttf);
+    font-family: RoseVelt;
+}
+
+* {
+    box-sizing:border-box;
+}
+
+a{
+    text-decoration: none;
+    font-family: 'RoseVelt';
+    color: white;
+    letter-spacing: 0.7em;
+    font-weight: 400;
+    font-size: 2.2vw;
+    border-style: none;
+    border-width: 0.3vw 0;
+    padding: 1vw 0 1vw 1.2vw;
+}
+h2{
+    margin: 0;
+}
+
+body.index{ 
+    background-color: #2C3C51;
+    margin: 0;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+}
+.logo{
+    width: 100%;
+    height: min(40vw,2000px);
+    background: url(assets/faded_logo.png) no-repeat center center/contain;
+    display: flex;
+    z-index: 1;
+    overflow: auto;
+    align-items: flex-end;
+}
+.majdBarakat{
+    position: relative;
+    display: block;
+    width: 100vw;
+    text-align: center;
+    z-index: 2;
+    color: white;
+    font-size: 8.5vw;
+    overflow: visible;
+    margin: 0.3em 0;
+    font-weight: 100;
+    font-family: 'RoseVelt';
+} 
+.btn-container{
+    display: flex;
+    flex-direction: row;
+    gap: 5vw;
+    justify-content: center;
+
+}
+
+a:hover{
+    border-style: solid;
+    color: #F1BF98;
+    border-color: white;
+}
