@@ -23,21 +23,64 @@
     --secondary-text-color: #FF4D5A;
 }
 
-body{
-    background: midnightblue;
-    margin: 0;
-    overflow: hidden;
+/* Universal */
+
+h1{
+    font-family: var(--primary-font);
+    font-size: 7.5rem;
+    margin: 10px;
+    line-height: 1;
+    color: var(--primary-text-color);
+}
+
+h2{
+    font-family: var(--primary-font);
+    font-size: 3.1rem;
+    margin: 0 10px 10px 20px;
+    line-height: 1;
+    color: var(--secondary-text-color);
+    opacity: 0.7;
+}
+
+.btn-container{
+    display: flex;
+    margin: 20px 20px;
+    gap:30px;
+}
+
+a.btn1{
+    color: var(--primary-text-color);
+    background: var(--secondary-text-color);
+    font-family: var(--secondary-font);
+    padding: 20px 60px;
+}
+
+a.btn2{
+    color: var(--secondary-text-color);
+    border-style: solid;
+    border-color: var(--secondary-text-color);
+    font-family: var(--secondary-font);
+    padding: 20px 60px;
 }
 
 a{
     text-decoration: none;
 }
 
-div.background{
+body{
+    background: midnightblue;
+    margin: 0;
+    overflow: hidden;
     background: url('assets/night-bgd.svg') no-repeat center center/cover;
     width: max(100vw);
     height: 100vh;
-    position: relative;
+    background-attachment: fixed;
+}
+
+
+div.container{
+    height: 100vh;
+    overflow: auto;
 }
 
 .navbar-container{
@@ -100,10 +143,42 @@ div.background{
     font-family: var(--secondary-font);
     margin:0;
 }
-/* TITLE */
+
+.page-selector-container{
+    background: red;
+    height: 80vh;
+    width: 3vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    z-index: 21;
+}
+
+.page-selector{
+    width: 60px;
+    height: 200px;
+    top: 38vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: column;
+    position: fixed;
+}
+
+.page-selector a{
+    position: relative;
+    width: 6px;
+    margin: 15px 0;
+    height: 6px;
+    border-radius: 50%;
+    background: white;
+}
+
+
+/* Page 01 -------------------------------------------*/
 
 section#page-01 .title-container{
-    /* background: red; */
     position:absolute;
     margin-left: 5%;
     top: 35%;
@@ -111,46 +186,6 @@ section#page-01 .title-container{
     display: flex;
     flex-direction: column;
 }
-
-section#page-01 h1{
-    font-family: var(--primary-font);
-    font-size: 7.5rem;
-    margin: 10px;
-    line-height: 1;
-    color: var(--primary-text-color);
-}
-
-section#page-01 h2{
-    font-family: var(--primary-font);
-    font-size: 3.1rem;
-    margin: 0 10px 10px 20px;
-    line-height: 1;
-    color: var(--secondary-text-color);
-    opacity: 0.7;
-}
-
-section#page-01 .btn-container{
-    display: flex;
-    margin: 20px 20px;
-    gap:30px;
-}
-
-section#page-01 a.btn1{
-    color: var(--primary-text-color);
-    background: var(--secondary-text-color);
-    font-family: var(--secondary-font);
-    padding: 20px 60px;
-}
-
-section#page-01 a.btn2{
-    color: var(--secondary-text-color);
-    border-style: solid;
-    border-color: var(--secondary-text-color);
-    font-family: var(--secondary-font);
-    padding: 20px 60px;
-}
-
-/* BACKGROUND */
 
 section#page-01 .sphere-container{
     height:100vh;
@@ -172,35 +207,18 @@ section#page-01 .sphere{
     border-radius: 50%;
 }
 
-.page-selector-container{
-    height: 100vh;
-    width: 3vw;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
-.page-selector{
-    width: 60px;
-    height: 200px;
-    margin-top: 38vh;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    flex-direction: column;
-    position: relative;
-}
-
-.page-selector a{
-    position: relative;
-    width: 6px;
-    margin: 15px 0;
-    height: 6px;
-    border-radius: 50%;
-    background: white;
-}
-
 .page-selector a.p1-select{
     height: 30px;
     border-radius: 20%;
+}
+
+/* Page 02 -------------------------------------------*/
+ 
+section#page-02 .title-container{
+    position:relative;
+    margin-left: 5%;
+    top: 35%;
+    z-index: 12;
+    display: flex;
+    flex-direction: column;
 }
