@@ -17,7 +17,9 @@
     --primary-font: 'NoeDisplay';
     --secondary-font: 'Poppins';
     /*  COLORS  */
-    --primary-color:'';
+    --primary-color: #072142 ;
+    --secondary-color: #FF4D5A;
+    --light-color:white;
     /*  TEXT-COLORS  */
     --primary-text-color:white;
     --secondary-text-color: #FF4D5A;
@@ -68,7 +70,6 @@ a{
 }
 
 body{
-    background: midnightblue;
     margin: 0;
     overflow: hidden;
     background: url('assets/night-bgd.svg') no-repeat center center/cover;
@@ -90,7 +91,7 @@ div.container{
     flex-direction: row;
     justify-content: space-between;
     padding: 30px 40px 0 40px;
-    z-index: 10;
+    z-index: 30;
 }
 
 .logo{
@@ -175,6 +176,32 @@ div.container{
     background: white;
 }
 
+/* Nav Menu */
+
+.nav-menu{
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-color: var(--secondary-color);
+    z-index: 25;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+.nav-menu li{
+    font-family: var(--secondary-font);
+    font-size: clamp(80px,10vw,135px);
+    font-weight: 500;
+}
+
+.nav-menu li a{
+    color: var(--primary-text-color);
+}
 
 /* Page 01 -------------------------------------------*/
 
@@ -213,7 +240,7 @@ section#page-01 .sphere{
 }
 
 /* Page 02 -------------------------------------------*/
- 
+/*  
 section#page-02 .title-container{
     position:relative;
     margin-left: 5%;
@@ -221,4 +248,4 @@ section#page-02 .title-container{
     z-index: 12;
     display: flex;
     flex-direction: column;
-}
+} */
