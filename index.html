@@ -6,22 +6,25 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles.css">
         <title>Majd Barakat Portfolio</title>
-        <script src="app.js"></script>
-        <script></script>
+        <script src="js/jquery.js"></script>
+        <script src="js/app.js"></script>
     </head>
     <body>
+    <div class="menu-box" id="mb1"></div>
+    <div class="menu-box" id="mb2"></div>
+    <div class="menu-box" id="mb3"></div>
         <ul class="nav-menu">
-        <li class=""><a href="">Home</a></li>
-        <li class=""><a href="">Projects</a></li>
-        <li class=""><a href="">About</a></li>
-        <li class=""><a href="">Contact Me</a></li>
-    </ul>
+            <li id="Home"><a href="">Home</a></li>
+            <li id="Projects"><a href="">Projects</a></li>
+            <li id="About"><a href="">About</a></li>
+            <li id="ContactMe"><a href="">Contact Me</a></li>
+        </ul>
     <div>
         <div  class="container">
             <header id="navbar">
                 <div class="navbar-container">
                     <a href="" class="logo">mb</a>
-                    <a class="burger" onclick ="menuButtonClick()">
+                    <a class="burger" id="OFF">
                         <div class="line1"></div>
                         <div class="line2"></div>
                         <div class="line3"></div>
@@ -53,10 +56,10 @@
                         <div class="sphere"></div>
                     </div>
                         <div class="page-selector">
-                            <a href="#page-01" class="p1-select"></a>
-                            <a href="#page-02" class="p2-select"></a>
-                            <a href="#page-03" class="p3-select"></a>
-                            <a href="#page-04" class="p4-select"></a>
+                            <a href="#page-01" class="p-select" id=''></a>
+                            <a href="#page-02" class="p-select" id=''></a>
+                            <a href="#page-03" class="p-select" id=''></a>
+                            <a href="#page-04" class="p-select" id=''></a>
                         </div>
             </section>
         </div>
@@ -93,6 +96,85 @@
 
     </div>
         
+<script>
+    
+    $(document).ready(function(){
+
+
+        var burger = $(".burger");
+        var line1 = $(".line1");
+        var line2 = $(".line2");
+        var line3 = $(".line3");
+        var mb1 = $("#mb1");
+        var mb2 = $("#mb2");
+        var mb3 = $("#mb3");
+        var navMenu = $(".nav-menu");
+        var menuBtns = $(".nav-menu li a");
+        var scrollLink = $(".p-select");
+        
+        function slideIn(v1,v2,v3){
+            v1.transition({x:'0vw'});
+            v2.transition({x:'0vw',delay: 200});
+            v3.transition({x:'0vw',delay: 400});
+        }
+        
+        function slideOut(v1,v2,v3){
+            v1.transition({x:'100vw',delay: 600});
+            v2.transition({x:'100vw',delay: 400});
+            v3.transition({x:'100vw',delay: 200});
+        }
+    
+        burger.click(function(){
+            if(burger.attr("id") == "OFF"){
+                burger.attr("id","ON");
+                line1.transition({rotate:'45', y:"21px"});
+                line2.transition({x:"-50px",opacity:0});
+                line3.transition({rotate:'-45deg' , y:"-21px"});
+                slideIn(mb1,mb2,mb3);
+                navMenu.transition({x:'0vw',delay: 600});
+                // menuBtns.transition({y:"0px",delay:700});
+            }
+            else{
+                burger.attr("id","OFF")
+                line1.transition({rotate:'-0', y:"0"})
+                line2.transition({x:"0",opacity:1})
+                line3.transition({rotate:'0' , y:"0"})
+                slideOut(mb1,mb2,mb3);
+                navMenu.transition({x:'100vw'});
+            }
+        });
+
+
+        scrollLink.click(function(e){
+            e.preventDefault();
+            $('body,html').animate({
+                scrollTop: $(this.hash).offset().top 
+            },500);
+        });
+
+        $(window).scroll(function(){
+            var scrollbarLocation = $(this).scrollTop();
+
+            scrollLink.each(function(){
+
+                var sectionOffset = $(this.hash).offset().top
+
+                if(sectionOffset <= scrollbarLocation){
+                    $(this).addClass('active');
+                    $(this).siblings().removeClass('active');
+                } 
+            })
+        });
+
+    })
+    
+        // function pageAnimations(){
+        //     if($("#page"))
+        // }
+
+
+
+</script>
 
 </body>
 </html>

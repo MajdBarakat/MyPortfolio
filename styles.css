@@ -10,7 +10,7 @@
 }
 
 :root {
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth; */
     /*  MAX-VALUES  */
     --max-width: 1440px;
     /*  FONTS  */
@@ -23,6 +23,8 @@
     /*  TEXT-COLORS  */
     --primary-text-color:white;
     --secondary-text-color: #FF4D5A;
+
+    height: 400vh;
 }
 
 /* Universal */
@@ -33,6 +35,7 @@ h1{
     margin: 10px;
     line-height: 1;
     color: var(--primary-text-color);
+    text-shadow: 0 10px 30px rgba(2, 11, 22, 0.5)
 }
 
 h2{
@@ -42,6 +45,7 @@ h2{
     line-height: 1;
     color: var(--secondary-text-color);
     opacity: 0.7;
+    text-shadow: 0 10px 30px rgba(2, 11, 22, 0.5)
 }
 
 .btn-container{
@@ -98,21 +102,36 @@ div.container{
     font-family: var(--primary-font);
     font-size: 3em;
     color: var(--primary-text-color);
-    margin-left:20px ;
+    margin-left:20px;
+    transition: text-shadow 0.2s ease-in, opacity 0.2s ease-in ;
+}
+
+.logo:hover{
+    opacity: 0.9;
+    text-shadow: -0.100em -0.100em 0 var(--secondary-color);
 }
 
 .burger{
     justify-self:center;
     position: relative;
     margin: 4px 20px 0 0;
+    cursor:pointer;
+    transition: opacity 0.2s ease-in;
 }
+
 
 .burger div{
     width:45px;
     height:5px;
     margin:10px;
+    border-radius: 50px;
     background: var(--primary-text-color);
 }
+
+.burger:hover{
+    opacity: 0.7;
+}
+
 
 .footer-container{
     width: 100%;
@@ -157,7 +176,7 @@ div.container{
 }
 
 .page-selector{
-    width: 60px;
+    width: 4%;
     height: 200px;
     top: 38vh;
     display: flex;
@@ -172,18 +191,23 @@ div.container{
     width: 6px;
     margin: 15px 0;
     height: 6px;
-    border-radius: 50%;
+    border-radius: 20px;
     background: white;
+    transition: height 0.5s ease-in;
+}
+
+.page-selector a#active{
+    height: 40px;
 }
 
 /* Nav Menu */
 
 .nav-menu{
-    display: none;
+    display: flex;
     width: 100vw;
     height: 100vh;
-    position: absolute;
-    background-color: var(--secondary-color);
+    position: fixed;
+    background-color: #072142;
     z-index: 25;
     margin: 0;
     padding: 0;
@@ -191,17 +215,51 @@ div.container{
     align-items: center;
     justify-content: center;
     list-style: none;
+    transform: translate(100vw);
 }
 
 .nav-menu li{
     font-family: var(--secondary-font);
     font-size: clamp(80px,10vw,135px);
     font-weight: 500;
+    text-align: center;
+    overflow: hidden;
+    width:90vw
 }
 
 .nav-menu li a{
     color: var(--primary-text-color);
+    transition: color 0.2s ease-in, text-shadow 0.2s ease-in;
 }
+
+.menu-box{
+    width: 100vw;
+    height:100vh;
+    position: fixed;
+    transform: translate(100vw);
+}
+
+#mb1{
+    background-color: #010307;
+    z-index: 22;
+}
+#mb2{
+    background-color: #030D1A;
+    z-index: 23;
+}
+#mb3{
+    background-color:#05172E;
+    z-index: 24;
+}
+
+.nav-menu li a:hover{
+    color: #FF4D5A;
+    text-shadow: -0.100em -0.100em 0 #030D1A;
+}
+
+
+
+
 
 /* Page 01 -------------------------------------------*/
 
@@ -212,6 +270,11 @@ section#page-01 .title-container{
     z-index: 12;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
+}
+
+section#page-01 .title-container h1{
+    transform: translate(-50vw);
 }
 
 section#page-01 .sphere-container{

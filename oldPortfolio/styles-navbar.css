@@ -54,7 +54,7 @@
     height: 0.2rem;
     background: white;
     margin: 7px;
-    border-radius: 0.5rem;
+    border-radius: 50%;
   }
   
 .burger:hover{
