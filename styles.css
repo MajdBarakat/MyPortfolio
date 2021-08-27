@@ -80,12 +80,13 @@ body{
     width: max(100vw);
     height: 100vh;
     background-attachment: fixed;
+    
 }
 
 
 div.container{
     height: 100vh;
-    overflow: auto;
+    position: relative;
 }
 
 .navbar-container{
@@ -184,6 +185,7 @@ div.container{
     justify-content: center;
     flex-direction: column;
     position: fixed;
+    z-index: 21;
 }
 
 .page-selector a{
@@ -193,10 +195,10 @@ div.container{
     height: 6px;
     border-radius: 20px;
     background: white;
-    transition: height 0.5s ease-in;
+    transition: height 0.1s ease-in;
 }
 
-.page-selector a#active{
+.page-selector a.active{
     height: 40px;
 }
 
@@ -258,23 +260,28 @@ div.container{
 }
 
 
-
-
-
-/* Page 01 -------------------------------------------*/
-
-section#page-01 .title-container{
+.title-container{
     position:absolute;
     margin-left: 5%;
-    top: 35%;
+    top: 35vh;
     z-index: 12;
     display: flex;
     flex-direction: column;
     overflow: hidden;
 }
 
+
+
+.page-selector a.p1-select{
+    height: 30px;
+    border-radius: 20%;
+}
+
+/* Page 01 -------------------------------------------*/
+
+
 section#page-01 .title-container h1{
-    transform: translate(-50vw);
+    /* transform: translate(-110vw); */
 }
 
 section#page-01 .sphere-container{
@@ -297,18 +304,33 @@ section#page-01 .sphere{
     border-radius: 50%;
 }
 
-.page-selector a.p1-select{
-    height: 30px;
-    border-radius: 20%;
+/* Pages 02 - 04 -------------------------------------------*/ 
+
+.project-container{
+    height:100vh;
+    width: 70vw;
+    position:relative;
+    top: 0;
+    bottom: 0;
+    left: 32%;
+    display:flex;
+    z-index: 1;
 }
 
-/* Page 02 -------------------------------------------*/
-/*  
-section#page-02 .title-container{
-    position:relative;
-    margin-left: 5%;
-    top: 35%;
-    z-index: 12;
-    display: flex;
-    flex-direction: column;
-} */
+.project-container h1{
+    position:absolute;
+    top:20%;
+    left:11%;
+    z-index: 20;
+}
+
+.project-bgd{
+    left: 22%;
+    width: 70%;
+    height: 75%;
+    background: var(--primary-color);
+    position: relative;
+    align-self: center;
+    justify-self: center;
+}
+

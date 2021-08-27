@@ -44,6 +44,8 @@
             <!--- Landing Page #01 -->
             
             <section id="page-01" class="page">
+                <div class="container">
+
                     <div class="title-container">
                         <h1>MAJD <br> BARAKAT</h1>
                         <h2>UI UX Web Developer</h2>
@@ -56,11 +58,13 @@
                         <div class="sphere"></div>
                     </div>
                         <div class="page-selector">
-                            <a href="#page-01" class="p-select" id=''></a>
-                            <a href="#page-02" class="p-select" id=''></a>
-                            <a href="#page-03" class="p-select" id=''></a>
-                            <a href="#page-04" class="p-select" id=''></a>
+                            <a href="#page-01" class="active" id='p1'></a>
+                            <a href="#page-02" class="" id='p2'></a>
+                            <a href="#page-03" class="" id='p3'></a>
+                            <a href="#page-04" class="" id='p4'></a>
                         </div>
+                </div>  
+
             </section>
         </div>
         
@@ -79,7 +83,10 @@
                     </div>
                 </div>
                 <div class="project-container">
-                    <div class="project"></div>
+                    <h1>#01</h1>
+                    <div class="project-bgd">
+                        <div class="project"></div>
+                    </div>
                 </div>
             </div>  
         </section>
@@ -87,11 +94,48 @@
         <!---  Page #03 -->
         
         <section id="page-03" class="page">
+            
+            <div class="container">
+                <div class="title-container">
+                    <h1>Project <br> Name </h1>
+                    <h2>Project Description</h2>
+                    <div class="btn-container">
+                        <a href="" class="btn1">My Projects</a>
+                        <a href="" class="btn2">Contact Me</a>
+                    </div>
+                </div>
+                <div class="project-container">
+                    <h1>#02</h1>
+                    <div class="project-bgd">
+                        <div class="project"></div>
+                    </div>
+                </div>
+            </div>  
+
         </section>
         
         <!---  Page #04 -->
         
         <section id="page-04" class="page">
+
+            
+            <div class="container">
+                <div class="title-container">
+                    <h1>Project <br> Name </h1>
+                    <h2>Project Description</h2>
+                    <div class="btn-container">
+                        <a href="" class="btn1">My Projects</a>
+                        <a href="" class="btn2">Contact Me</a>
+                    </div>
+                </div>
+                <div class="project-container">
+                    <h1>#03</h1>
+                    <div class="project-bgd">
+                        <div class="project"></div>
+                    </div>
+                </div>
+            </div>  
+
         </section>
 
     </div>
@@ -99,7 +143,6 @@
 <script>
     
     $(document).ready(function(){
-
 
         var burger = $(".burger");
         var line1 = $(".line1");
@@ -110,7 +153,8 @@
         var mb3 = $("#mb3");
         var navMenu = $(".nav-menu");
         var menuBtns = $(".nav-menu li a");
-        var scrollLink = $(".p-select");
+        var scrollLink = $(".page-selector a");
+
         
         function slideIn(v1,v2,v3){
             v1.transition({x:'0vw'});
@@ -132,7 +176,7 @@
                 line3.transition({rotate:'-45deg' , y:"-21px"});
                 slideIn(mb1,mb2,mb3);
                 navMenu.transition({x:'0vw',delay: 600});
-                // menuBtns.transition({y:"0px",delay:700});
+                menuBtns.transition({y:"0px",delay:700});
             }
             else{
                 burger.attr("id","OFF")
@@ -144,33 +188,53 @@
             }
         });
 
-
         scrollLink.click(function(e){
             e.preventDefault();
             $('body,html').animate({
                 scrollTop: $(this.hash).offset().top 
-            },500);
+            },700);
         });
+
 
         $(window).scroll(function(){
             var scrollbarLocation = $(this).scrollTop();
+            var pageHeight = $(window).height();
+            var pageHeightSub =  ($(window).height() * 0.8)
+            // console.log(scrollbarLocation + "---" + pageHeight)
 
-            scrollLink.each(function(){
+            if(scrollbarLocation <= pageHeight - pageHeightSub){
+                $("#p1").addClass('active');
+                $("#p1").siblings().removeClass('active');
+            } 
+            else if(scrollbarLocation <= (2 * pageHeight) - pageHeightSub){
+                $("#p2").addClass('active');
+                $("#p2").siblings().removeClass('active');
+            } 
+            else if(scrollbarLocation <= (3 * pageHeight) - pageHeightSub){
+                $("#p3").addClass('active');
+                $("#p3").siblings().removeClass('active');
+            } 
+            else if(scrollbarLocation <= (4 * pageHeight) - pageHeightSub){
+                $("#p4").addClass('active');
+                $("#p4").siblings().removeClass('active');
+            } 
+            
+            // scrollLink.each(function(){
 
-                var sectionOffset = $(this.hash).offset().top
+            // var sectionOffset = $(this.hash).offset().top
 
-                if(sectionOffset <= scrollbarLocation){
-                    $(this).addClass('active');
-                    $(this).siblings().removeClass('active');
-                } 
-            })
+            // if(sectionOffset <= scrollbarLocation){
+            //     $(this).addClass('active');
+            //     $(this).siblings().removeClass('active');
+            // } 
+            // })
+
+
         });
+
 
     })
     
-        // function pageAnimations(){
-        //     if($("#page"))
-        // }
 
 
 
