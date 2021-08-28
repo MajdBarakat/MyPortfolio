@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <link rel="stylesheet" href="styles.css">
         <title>Majd Barakat Portfolio</title>
         <script src="js/jquery.js"></script>
@@ -47,7 +48,7 @@
                 <div class="container">
 
                     <div class="title-container">
-                        <h1>MAJD <br> BARAKAT</h1>
+                        <h1 data-aos="slide-right" data-aos-easing="ease-out">MAJD <br> BARAKAT</h1>
                         <h2>UI UX Web Developer</h2>
                         <div class="btn-container">
                             <a href="#page-02" class="btn1">My Projects</a>
@@ -135,11 +136,17 @@
                     </div>
                 </div>
             </div>  
-
+            
         </section>
-
-    </div>
         
+    </div>
+    
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+    AOS.init();
+</script>
+
 <script>
     
     $(document).ready(function(){
@@ -167,7 +174,7 @@
             v2.transition({x:'100vw',delay: 400});
             v3.transition({x:'100vw',delay: 200});
         }
-    
+        
         burger.click(function(){
             if(burger.attr("id") == "OFF"){
                 burger.attr("id","ON");
@@ -239,6 +246,7 @@
 
 
 </script>
+
 
 </body>
 </html>
