@@ -24,7 +24,7 @@
     --primary-text-color:white;
     --secondary-text-color: #FF4D5A;
 
-    height: 400vh;
+
 }
 
 /* Universal */
@@ -75,7 +75,7 @@ a{
 
 body{
     margin: 0;
-    overflow: hidden;
+    overflow: auto;
     background: url('assets/night-bgd.svg') no-repeat center center/cover;
     width: max(100vw);
     height: 100vh;

@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link href="/aos-master/dist/aos.css" rel="stylesheet">
         <link rel="stylesheet" href="styles.css">
         <title>Majd Barakat Portfolio</title>
         <script src="js/jquery.js"></script>
@@ -47,8 +47,12 @@
             <section id="page-01" class="page">
                 <div class="container">
 
-                    <div class="title-container">
-                        <h1 data-aos="slide-right" data-aos-easing="ease-out">MAJD <br> BARAKAT</h1>
+                    <div data-aos="slide-out" 
+                    data-aos-duration="10"
+                    data-aos-anchor-placement="top-top"
+                    class="title-container"
+                    >
+                        <h1 data-aos="slide-right" >MAJD <br> BARAKAT</h1>
                         <h2>UI UX Web Developer</h2>
                         <div class="btn-container">
                             <a href="#page-02" class="btn1">My Projects</a>
@@ -75,8 +79,14 @@
             class="page">
 
             <div class="container">
-                <div class="title-container">
-                    <h1>Project <br> Name </h1>
+                <div data-aos="slide-in"data-aos-anchor-placement="center-center" 
+                data-aos-duration="100"
+                class="title-container"
+                >
+                    <h1 
+                    data-aos="slide-right"     data-aos-anchor-placement="center-center"
+                    >
+                    Project <br> Name </h1>
                     <h2>Project Description</h2>
                     <div class="btn-container">
                         <a href="" class="btn1">My Projects</a>
@@ -141,10 +151,15 @@
         
     </div>
     
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="/aos-master/dist/aos.js"></script>
 
 <script>
-    AOS.init();
+    AOS.init({
+        anchorPlacement: 'top-bottom',
+        mirror: "false",
+        duration: 500,
+        easing:"ease-in-out",
+    });
 </script>
 
 <script>
