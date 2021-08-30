@@ -9,6 +9,8 @@
         <title>Majd Barakat Portfolio</title>
         <script src="js/jquery.js"></script>
         <script src="js/app.js"></script>
+        <script src="js/jquery.mousewheel.js"></script>
+        <script src="js/jquery.mousewheel.min.js"></script>
     </head>
     <body>
     <div class="menu-box" id="mb1"></div>
@@ -47,12 +49,8 @@
             <section id="page-01" class="page">
                 <div class="container">
 
-                    <div data-aos="slide-out" 
-                    data-aos-duration="10"
-                    data-aos-anchor-placement="top-top"
-                    class="title-container"
-                    >
-                        <h1 data-aos="slide-right" >MAJD <br> BARAKAT</h1>
+                    <div class="title-container">
+                        <h1>MAJD <br> BARAKAT</h1>
                         <h2>UI UX Web Developer</h2>
                         <div class="btn-container">
                             <a href="#page-02" class="btn1">My Projects</a>
@@ -79,14 +77,8 @@
             class="page">
 
             <div class="container">
-                <div data-aos="slide-in"data-aos-anchor-placement="center-center" 
-                data-aos-duration="100"
-                class="title-container"
-                >
-                    <h1 
-                    data-aos="slide-right"     data-aos-anchor-placement="center-center"
-                    >
-                    Project <br> Name </h1>
+                <div  class="title-container">
+                    <h1>Project <br> Name </h1>
                     <h2>Project Description</h2>
                     <div class="btn-container">
                         <a href="" class="btn1">My Projects</a>
@@ -151,7 +143,7 @@
         
     </div>
     
-<script src="/aos-master/dist/aos.js"></script>
+<!-- <script src="/aos-master/dist/aos.js"></script>
 
 <script>
     AOS.init({
@@ -160,7 +152,7 @@
         duration: 500,
         easing:"ease-in-out",
     });
-</script>
+</script> -->
 
 <script>
     
@@ -176,7 +168,22 @@
         var navMenu = $(".nav-menu");
         var menuBtns = $(".nav-menu li a");
         var scrollLink = $(".page-selector a");
+        var pageHeight = $(window).height();
 
+        $(window).scroll(function() {
+            // console.log(getScrollBarLocation())
+            // console.log($('section#page-01 h1').offset());
+            getPageNumber();
+        });
+        
+        function getPageNumber(){
+            var scrollbarLocation = $(window).scrollTop();
+            return Math.round(scrollbarLocation/pageHeight) + 1;
+        };
+
+        function getScrollDirection(){
+            
+        }
         
         function slideIn(v1,v2,v3){
             v1.transition({x:'0vw'});
@@ -209,37 +216,21 @@
                 navMenu.transition({x:'100vw'});
             }
         });
-
+        
         scrollLink.click(function(e){
             e.preventDefault();
             $('body,html').animate({
                 scrollTop: $(this.hash).offset().top 
             },700);
         });
-
-
+        
+        
+        
         $(window).scroll(function(){
-            var scrollbarLocation = $(this).scrollTop();
-            var pageHeight = $(window).height();
-            var pageHeightSub =  ($(window).height() * 0.8)
             // console.log(scrollbarLocation + "---" + pageHeight)
-
-            if(scrollbarLocation <= pageHeight - pageHeightSub){
-                $("#p1").addClass('active');
-                $("#p1").siblings().removeClass('active');
-            } 
-            else if(scrollbarLocation <= (2 * pageHeight) - pageHeightSub){
-                $("#p2").addClass('active');
-                $("#p2").siblings().removeClass('active');
-            } 
-            else if(scrollbarLocation <= (3 * pageHeight) - pageHeightSub){
-                $("#p3").addClass('active');
-                $("#p3").siblings().removeClass('active');
-            } 
-            else if(scrollbarLocation <= (4 * pageHeight) - pageHeightSub){
-                $("#p4").addClass('active');
-                $("#p4").siblings().removeClass('active');
-            } 
+            
+            $("#p" + getPageNumber()).addClass('active');
+            $("#p" + getPageNumber()).siblings().removeClass('active');
             
             // scrollLink.each(function(){
 
