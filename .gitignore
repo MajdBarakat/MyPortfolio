@@ -162,3 +162,15 @@ aos-master/test/elements.spec.js
 aos-master/test/index.js
 aos-master/test/fixtures/aos-offset.fixture.html
 aos-master/test/fixtures/aos.fixture.html
+jquery-mousewheel-main/.eslintrc.js
+jquery-mousewheel-main/.gitignore
+jquery-mousewheel-main/bower.json
+jquery-mousewheel-main/ChangeLog.md
+jquery-mousewheel-main/LICENSE.txt
+jquery-mousewheel-main/README.md
+jquery-mousewheel-main/test/.eslintrc.js
+jquery-mousewheel-main/test/index.html
+jquery-mousewheel-main/test/karma.conf.js
+jquery-mousewheel-main/test/manual.html
+jquery-mousewheel-main/test/scroll.html
+jquery-mousewheel-main/test/unit.js
