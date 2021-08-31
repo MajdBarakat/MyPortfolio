@@ -174,7 +174,8 @@
         $(window).scroll(function() {
             // console.log(getScrollBarLocation())
             // console.log($('section#page-01 h1').offset());
-            scrollToPage( getScrollDirection() , getPageNumber() , 4)
+            // scrollToPage( getScrollDirection() , getPageNumber() , 4)
+            console.log(getScrollDirection);
         });
         
         function getPageNumber(){
@@ -182,30 +183,34 @@
             return Math.round(scrollbarLocation/pageHeight) + 1;
         };
 
+        $(window).on("mousewheel DOMMouseScroll", function(event) {
+            // scrollToPage( getScrollDirection() , getPageNumber() , 4)
+        });
+
         
         function getScrollDirection(event){
-        var st = $(this).scrollTop();
-        var direction = null;
-        if (st > lastScrollTop){
-            direction = "down"
-        } else {
-            direction = "up"
-        }
-        lastScrollTop = st;
-        return direction;
-        }
+            var st = $(this).scrollTop();
+            var direction = null;
+            if (st > lastScrollTop){
+                direction = "down"
+            } else {
+                direction = "up"
+            }
+            lastScrollTop = st;
+            return direction;
+            }
 
-        function scrollToPage(getScrollDirection,pageNumber,maxPages){
-            if(getScrollDirection == "down" && pageNumber != maxPages){
-                console.log("going to" + + " page no:" + (getPageNumber() + 1))
-                $("#p" + (getPageNumber() + 1)).trigger('click');
-                // console.log(getScrollDirection + pageNumber + maxPages)
-            }
-            else if(getScrollDirection == "up" && pageNumber != 1){
-                // console.log(getScrollDirection + pageNumber + maxPages)
-                console.log("going to page no:" + (getPageNumber() - 1))
-                $("#p" + (getPageNumber() - 1)).trigger('click');
-            }
+        // function scrollToPage(ScrollDirection,pageNumber,maxPages){
+        //     if(ScrollDirection == "down"){
+        //         // console.log("going" + ScrollDirection + " to page no:" + (getPageNumber() + 1))
+        //         // $("#p" + (getPageNumber() + 1)).trigger('click');
+        //         console.log(ScrollDirection)
+        //     }
+        //     else if(ScrollDirection == "up"){
+        //         console.log(ScrollDirection)
+        //         // console.log("going to page no:" + (getPageNumber() - 1))
+        //         // $("#p" + (getPageNumber() - 1)).trigger('click');
+        //     }
             
         }
         function slideIn(v1,v2,v3){
