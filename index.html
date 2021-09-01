@@ -170,6 +170,7 @@
         var scrollLink = $(".page-selector a");
         var pageHeight = $(window).height();
         var lastScrollTop = 0;
+        var isScrolling = false;
 
         $(window).scroll(function() {
             // console.log(getScrollBarLocation())
@@ -190,9 +191,9 @@
         function getScrollDirection(event){
             var st = $(this).scrollTop();
             var direction = null;
-            if (st > lastScrollTop){
+            if (st > lastScrollTop && isScrolling == false){
                 direction = "down"
-            } else if (st < lastScrollTop) {
+            } else if (st < lastScrollTop && isScrolling == false) {
                 direction = "up"
             } else{
                 direction = "none"
@@ -203,16 +204,16 @@
 
         function scrollToPage(ScrollDirection,pageNumber,maxPages){
             if(ScrollDirection == "down" && pageNumber < maxPages){
-                // console.log("going" + ScrollDirection + " to page no:" + (getPageNumber() + 1))
                 $("#p" + (getPageNumber() + 1)).trigger('click'); 
-                console.log(ScrollDirection)
+                console.log(ScrollDirection);
+                isScrolling = true;
             }
             else if(ScrollDirection == "up" && pageNumber > 1){
-                console.log(ScrollDirection)
-                // console.log("going to page no:" + (getPageNumber() - 1))
                 $("#p" + (getPageNumber() - 1)).trigger('click');
                 console.log(ScrollDirection)
+                isScrolling = true;
             }
+            setTimeout(function(){isScrolling = false}, 750);
         }
 
         function slideIn(v1,v2,v3){
