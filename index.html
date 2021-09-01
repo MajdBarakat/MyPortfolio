@@ -196,7 +196,6 @@
             } else if (st < lastScrollTop && isScrolling == false) {
                 direction = "up"
             } else{
-                direction = "none"
             }
             lastScrollTop = st;
             return direction;
@@ -205,12 +204,12 @@
         function scrollToPage(ScrollDirection,pageNumber,maxPages){
             if(ScrollDirection == "down" && pageNumber < maxPages){
                 $("#p" + (getPageNumber() + 1)).trigger('click'); 
-                console.log(ScrollDirection);
+                // console.log(ScrollDirection);
                 isScrolling = true;
             }
             else if(ScrollDirection == "up" && pageNumber > 1){
                 $("#p" + (getPageNumber() - 1)).trigger('click');
-                console.log(ScrollDirection)
+                // console.log(ScrollDirection)
                 isScrolling = true;
             }
             setTimeout(function(){isScrolling = false}, 750);
