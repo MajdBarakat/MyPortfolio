@@ -174,8 +174,6 @@
         $(window).scroll(function() {
             // console.log(getScrollBarLocation())
             // console.log($('section#page-01 h1').offset());
-            // scrollToPage( getScrollDirection() , getPageNumber() , 4)
-            console.log(getScrollDirection);
         });
         
         function getPageNumber(){
@@ -184,7 +182,7 @@
         };
 
         $(window).on("mousewheel DOMMouseScroll", function(event) {
-            // scrollToPage( getScrollDirection() , getPageNumber() , 4)
+            scrollToPage( getScrollDirection() , getPageNumber() , 4)
         });
 
         
@@ -200,18 +198,18 @@
             return direction;
             }
 
-        // function scrollToPage(ScrollDirection,pageNumber,maxPages){
-        //     if(ScrollDirection == "down"){
-        //         // console.log("going" + ScrollDirection + " to page no:" + (getPageNumber() + 1))
-        //         // $("#p" + (getPageNumber() + 1)).trigger('click');
-        //         console.log(ScrollDirection)
-        //     }
-        //     else if(ScrollDirection == "up"){
-        //         console.log(ScrollDirection)
-        //         // console.log("going to page no:" + (getPageNumber() - 1))
-        //         // $("#p" + (getPageNumber() - 1)).trigger('click');
-        //     }
-        // }
+        function scrollToPage(ScrollDirection,pageNumber,maxPages){
+            if(ScrollDirection == "down" && pageNumber < maxPages){
+                // console.log("going" + ScrollDirection + " to page no:" + (getPageNumber() + 1))
+                $("#p" + (getPageNumber() + 1)).trigger('click'); 
+                console.log(ScrollDirection)
+            }
+            else if(ScrollDirection == "up" && pageNumber > 1){
+                console.log(ScrollDirection)
+                // console.log("going to page no:" + (getPageNumber() - 1))
+                $("#p" + (getPageNumber() - 1)).trigger('click');
+            }
+        }
 
         function slideIn(v1,v2,v3){
             v1.transition({x:'0vw'});
