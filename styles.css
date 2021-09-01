@@ -75,7 +75,7 @@ a{
 
 body{
     margin: 0;
-    overflow: auto;
+    overflow-x: hidden;
     background: url('assets/night-bgd.svg') no-repeat center center/cover;
     width: max(100vw);
     height: 100vh;
