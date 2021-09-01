@@ -174,13 +174,14 @@
         $(window).scroll(function() {
             // console.log(getScrollBarLocation())
             // console.log($('section#page-01 h1').offset());
+            // console.log(getScrollDirection())
         });
         
         function getPageNumber(){
             var scrollbarLocation = $(window).scrollTop();
             return Math.round(scrollbarLocation/pageHeight) + 1;
         };
-
+        
         $(window).on("mousewheel DOMMouseScroll", function(event) {
             scrollToPage( getScrollDirection() , getPageNumber() , 4)
         });
@@ -191,8 +192,10 @@
             var direction = null;
             if (st > lastScrollTop){
                 direction = "down"
-            } else {
+            } else if (st < lastScrollTop) {
                 direction = "up"
+            } else{
+                direction = "none"
             }
             lastScrollTop = st;
             return direction;
@@ -208,6 +211,7 @@
                 console.log(ScrollDirection)
                 // console.log("going to page no:" + (getPageNumber() - 1))
                 $("#p" + (getPageNumber() - 1)).trigger('click');
+                console.log(ScrollDirection)
             }
         }
 
