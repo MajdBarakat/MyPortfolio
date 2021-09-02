@@ -80,9 +80,13 @@ body{
     width: max(100vw);
     height: 100vh;
     background-attachment: fixed;
+    scroll-snap-type: y mandatory;
     
 }
 
+section{
+    scroll-snap-align: start;
+}
 
 div.container{
     height: 100vh;

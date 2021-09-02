@@ -23,59 +23,54 @@
             <li id="ContactMe"><a href="">Contact Me</a></li>
         </ul>
     <div>
-        <div  class="container">
-            <header id="navbar">
-                <div class="navbar-container">
-                    <a href="" class="logo">mb</a>
-                    <a class="burger" id="OFF">
-                        <div class="line1"></div>
-                        <div class="line2"></div>
-                        <div class="line3"></div>
-                    </a>
+        <header id="navbar">
+            <div class="navbar-container">
+                <a href="" class="logo">mb</a>
+                <a class="burger" id="OFF">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </a>
+            </div>
+        </header>
+        
+        <footer>
+            <div class="footer-container">
+                <div class="scroll-container">
+                <div class="scroll"></div>
+                <p>Scroll to <br> next page</p>
                 </div>
-            </header>
-            
-            <footer>
-                <div class="footer-container">
-                    <div class="scroll-container">
-                    <div class="scroll"></div>
-                    <p>Scroll to <br> next page</p>
+            </div>
+        </footer>
+
+        <!--- Landing Page #01 -->
+        
+        <section id="page-01" class="page">
+            <div class="container">
+                <div class="title-container">
+                    <h1>MAJD <br> BARAKAT</h1>
+                    <h2>UI UX Web Developer</h2>
+                    <div class="btn-container">
+                        <a href="#page-02" class="btn1">My Projects</a>
+                        <a href="" class="btn2">Contact Me</a>
                     </div>
                 </div>
-            </footer>
-
-            <!--- Landing Page #01 -->
-            
-            <section id="page-01" class="page">
-                <div class="container">
-
-                    <div class="title-container">
-                        <h1>MAJD <br> BARAKAT</h1>
-                        <h2>UI UX Web Developer</h2>
-                        <div class="btn-container">
-                            <a href="#page-02" class="btn1">My Projects</a>
-                            <a href="" class="btn2">Contact Me</a>
-                        </div>
+                <div class="sphere-container">
+                    <div class="sphere"></div>
+                </div>
+                    <div class="page-selector">
+                        <a href="#page-01" class="active" id='p1'></a>
+                        <a href="#page-02" class="" id='p2'></a>
+                        <a href="#page-03" class="" id='p3'></a>
+                        <a href="#page-04" class="" id='p4'></a>
                     </div>
-                    <div class="sphere-container">
-                        <div class="sphere"></div>
-                    </div>
-                        <div class="page-selector">
-                            <a href="#page-01" class="active" id='p1'></a>
-                            <a href="#page-02" class="" id='p2'></a>
-                            <a href="#page-03" class="" id='p3'></a>
-                            <a href="#page-04" class="" id='p4'></a>
-                        </div>
-                </div>  
+            </div>  
 
-            </section>
-        </div>
+        </section>
         
         <!---  Page #02 -->
         
-        <section id="page-02" 
-            class="page">
-
+        <section id="page-02" class="page">
             <div class="container">
                 <div  class="title-container">
                     <h1>Project <br> Name </h1>
@@ -97,7 +92,6 @@
         <!---  Page #03 -->
         
         <section id="page-03" class="page">
-            
             <div class="container">
                 <div class="title-container">
                     <h1>Project <br> Name </h1>
@@ -172,11 +166,11 @@
         var lastScrollTop = 0;
         var isScrolling = false;
 
-        $(window).scroll(function() {
-            // console.log(getScrollBarLocation())
-            // console.log($('section#page-01 h1').offset());
-            // console.log(getScrollDirection())
-        });
+        // $(window).scroll(function() {
+        //     // console.log(getScrollBarLocation())
+        //     // console.log($('section#page-01 h1').offset());
+        //     // console.log(getScrollDirection())
+        // });
         
         function getPageNumber(){
             var scrollbarLocation = $(window).scrollTop();
@@ -184,9 +178,9 @@
         };
         // scrollToPage( getScrollDirection() , getPageNumber() , 4)
         
-        $(window).on("mousewheel DOMMouseScroll", function(event) {
-            // console.log(getScrollDirection());
-        });
+        // $(window).on("mousewheel DOMMouseScroll", function(event) {
+        //     // console.log(getScrollDirection());
+        // });
 
         
         // function getScrollDirection(event){
@@ -200,25 +194,25 @@
         //     return direction;
         //     }
 
-        window.onscroll = () => {
-            const direction = this.oldScroll > this.scrollY ? 'up': 'down'
-            console.log(direction)
-            this.oldScroll = this.scrollY;
-        }
+        // window.onscroll = () => {
+        //     const direction = this.oldScroll > this.scrollY ? 'up': 'down'
+        //     console.log(direction)
+        //     this.oldScroll = this.scrollY;
+        // }
 
-        function scrollToPage(ScrollDirection,pageNumber,maxPages){
-            if(ScrollDirection == "down" && pageNumber < maxPages){
-                $("#p" + (getPageNumber() + 1)).trigger('click'); 
-                console.log(ScrollDirection);
-                isScrolling = true;
-            }
-            else if(ScrollDirection == "up" && pageNumber > 1){
-                $("#p" + (getPageNumber() - 1)).trigger('click');
-                console.log(ScrollDirection)
-                isScrolling = true;
-            }
-            setTimeout(function(){isScrolling = false}, 750);
-        }
+        // function scrollToPage(ScrollDirection,pageNumber,maxPages){
+        //     if(ScrollDirection == "down" && pageNumber < maxPages){
+        //         $("#p" + (getPageNumber() + 1)).trigger('click'); 
+        //         console.log(ScrollDirection);
+        //         isScrolling = true;
+        //     }
+        //     else if(ScrollDirection == "up" && pageNumber > 1){
+        //         $("#p" + (getPageNumber() - 1)).trigger('click');
+        //         console.log(ScrollDirection)
+        //         isScrolling = true;
+        //     }
+        //     setTimeout(function(){isScrolling = false}, 750);
+        // }
 
         function slideIn(v1,v2,v3){
             v1.transition({x:'0vw'});
