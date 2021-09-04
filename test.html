@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <section class="p1">
+            <h1>Page 1</h1>
+        </section>
+        <section class="p2">
+            <h1>Page 2</h1>
+        </section>
+        <section class="p3">
+            <h1>Page 3</h1>
+        </section>
+    </div>
+</body>
+
+<style>
+    h1{
+        color: white;
+        margin:0;
+        align-self: center;
+        font-size: 150px;
+    }
+    html{
+        overflow: hidden;
+    }
+    body{
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+        height: 300vh;
+    }
+    div{
+        scroll-snap-type: y mandatory;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        height: 100vh;
+    }
+    section{
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        justify-content: center;
+        scroll-snap-align: start;
+    }
+    .p1{
+        background-color: silver;
+    }
+    .p2{
+        background-color: darkgrey;
+    }
+    .p3{
+        background-color: grey;
+    }
+</style>
+
+</html>

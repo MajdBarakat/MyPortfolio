@@ -22,7 +22,6 @@
             <li id="About"><a href="">About</a></li>
             <li id="ContactMe"><a href="">Contact Me</a></li>
         </ul>
-    <div>
         <header id="navbar">
             <div class="navbar-container">
                 <a href="" class="logo">mb</a>
@@ -37,104 +36,95 @@
         <footer>
             <div class="footer-container">
                 <div class="scroll-container">
-                <div class="scroll"></div>
-                <p>Scroll to <br> next page</p>
+                    <div class="scroll"></div>
+                    <p>Scroll to <br> next page</p>
                 </div>
             </div>
         </footer>
-
+        
         <!--- Landing Page #01 -->
         
-        <section id="page-01" class="page">
-            <div class="container">
-                <div class="title-container">
-                    <h1>MAJD <br> BARAKAT</h1>
-                    <h2>UI UX Web Developer</h2>
-                    <div class="btn-container">
-                        <a href="#page-02" class="btn1">My Projects</a>
-                        <a href="" class="btn2">Contact Me</a>
-                    </div>
-                </div>
-                <div class="sphere-container">
-                    <div class="sphere"></div>
-                </div>
-                    <div class="page-selector">
-                        <a href="#page-01" class="active" id='p1'></a>
-                        <a href="#page-02" class="" id='p2'></a>
-                        <a href="#page-03" class="" id='p3'></a>
-                        <a href="#page-04" class="" id='p4'></a>
-                    </div>
-            </div>  
+    <div class="container">
 
+
+        <section id="page-01" class="page">
+            <div class="title-container">
+                <h1>MAJD <br> BARAKAT</h1>
+                <h2>UI UX Web Developer</h2>
+                <div class="btn-container">
+                    <a href="#page-02" class="btn1">My Projects</a>
+                    <a href="" class="btn2">Contact Me</a>
+                </div>
+            </div>
+            <div class="sphere-container">
+                <div class="sphere"></div>
+            </div>
+            <div class="page-selector">
+                <a href="#page-01" class="" id='p1'></a>
+                <a href="#page-02" class="" id='p2'></a>
+                <a href="#page-03" class="" id='p3'></a>
+                <a href="#page-04" class="" id='p4'></a>
+            </div>
         </section>
         
         <!---  Page #02 -->
         
         <section id="page-02" class="page">
-            <div class="container">
-                <div  class="title-container">
-                    <h1>Project <br> Name </h1>
-                    <h2>Project Description</h2>
-                    <div class="btn-container">
-                        <a href="" class="btn1">My Projects</a>
-                        <a href="" class="btn2">Contact Me</a>
-                    </div>
+            <div  class="title-container">
+                <h1>Project <br> Name </h1>
+                <h2>Project Description</h2>
+                <div class="btn-container">
+                    <a href="" class="btn1">My Projects</a>
+                    <a href="" class="btn2">Contact Me</a>
                 </div>
-                <div class="project-container">
-                    <h1>#01</h1>
-                    <div class="project-bgd">
-                        <div class="project"></div>
-                    </div>
+            </div>
+            <div class="project-container">
+                <h1>#01</h1>
+                <div class="project-bgd">
+                    <div class="project"></div>
                 </div>
-            </div>  
+            </div>
         </section>
         
         <!---  Page #03 -->
         
         <section id="page-03" class="page">
-            <div class="container">
-                <div class="title-container">
-                    <h1>Project <br> Name </h1>
-                    <h2>Project Description</h2>
-                    <div class="btn-container">
-                        <a href="" class="btn1">My Projects</a>
-                        <a href="" class="btn2">Contact Me</a>
-                    </div>
+            <div class="title-container">
+                <h1>Project <br> Name </h1>
+                <h2>Project Description</h2>
+                <div class="btn-container">
+                    <a href="" class="btn1">My Projects</a>
+                    <a href="" class="btn2">Contact Me</a>
                 </div>
-                <div class="project-container">
-                    <h1>#02</h1>
-                    <div class="project-bgd">
-                        <div class="project"></div>
-                    </div>
+            </div>
+            <div class="project-container">
+                <h1>#02</h1>
+                <div class="project-bgd">
+                    <div class="project"></div>
                 </div>
             </div>  
-
         </section>
         
         <!---  Page #04 -->
         
         <section id="page-04" class="page">
-
-            
-            <div class="container">
-                <div class="title-container">
-                    <h1>Project <br> Name </h1>
-                    <h2>Project Description</h2>
-                    <div class="btn-container">
-                        <a href="" class="btn1">My Projects</a>
-                        <a href="" class="btn2">Contact Me</a>
-                    </div>
+            <div class="title-container">
+                <h1>Project <br> Name </h1>
+                <h2>Project Description</h2>
+                <div class="btn-container">
+                    <a href="" class="btn1">My Projects</a>
+                    <a href="" class="btn2">Contact Me</a>
                 </div>
-                <div class="project-container">
-                    <h1>#03</h1>
-                    <div class="project-bgd">
-                        <div class="project"></div>
-                    </div>
+            </div>
+            <div class="project-container">
+                <h1>#03</h1>
+                <div class="project-bgd">
+                    <div class="project"></div>
                 </div>
-            </div>  
-            
+            </div>            
         </section>
-        
+    
+
     </div>
     
 <!-- <script src="/aos-master/dist/aos.js"></script>
@@ -166,54 +156,14 @@
         var lastScrollTop = 0;
         var isScrolling = false;
 
-        // $(window).scroll(function() {
-        //     // console.log(getScrollBarLocation())
-        //     // console.log($('section#page-01 h1').offset());
-        //     // console.log(getScrollDirection())
-        // });
-        
+
+        changeActivePage();
+
         function getPageNumber(){
-            var scrollbarLocation = $(window).scrollTop();
+            var scrollbarLocation = $(".container").scrollTop();
             return Math.round(scrollbarLocation/pageHeight) + 1;
         };
-        // scrollToPage( getScrollDirection() , getPageNumber() , 4)
         
-        // $(window).on("mousewheel DOMMouseScroll", function(event) {
-        //     // console.log(getScrollDirection());
-        // });
-
-        
-        // function getScrollDirection(event){
-        //     var st = $(this).scrollTop();
-        //     var direction = null;
-        //     if (st > lastScrollTop && isScrolling == false){
-        //         direction = "down"
-        //     } else if (st < lastScrollTop && isScrolling == false) {
-        //         direction = "up"
-        //     lastScrollTop = st;
-        //     return direction;
-        //     }
-
-        // window.onscroll = () => {
-        //     const direction = this.oldScroll > this.scrollY ? 'up': 'down'
-        //     console.log(direction)
-        //     this.oldScroll = this.scrollY;
-        // }
-
-        // function scrollToPage(ScrollDirection,pageNumber,maxPages){
-        //     if(ScrollDirection == "down" && pageNumber < maxPages){
-        //         $("#p" + (getPageNumber() + 1)).trigger('click'); 
-        //         console.log(ScrollDirection);
-        //         isScrolling = true;
-        //     }
-        //     else if(ScrollDirection == "up" && pageNumber > 1){
-        //         $("#p" + (getPageNumber() - 1)).trigger('click');
-        //         console.log(ScrollDirection)
-        //         isScrolling = true;
-        //     }
-        //     setTimeout(function(){isScrolling = false}, 750);
-        // }
-
         function slideIn(v1,v2,v3){
             v1.transition({x:'0vw'});
             v2.transition({x:'0vw',delay: 200});
@@ -246,38 +196,78 @@
             }
         });
         
-        scrollLink.click(function(e){
-            e.preventDefault();
-            $('body,html').animate({
-                scrollTop: $(this.hash).offset().top 
-            },700);
-        });
+        // scrollLink.click(function(e){
+        //     e.preventDefault();
+        //     $('.container').animate({
+        //         scrollTop: $(this.hash).offset().top 
+        //     },700);
+        // });
         
-        
-        
-        $(window).scroll(function(){
-            // console.log(scrollbarLocation + "---" + pageHeight)
-            
+        function changeActivePage(){
             $("#p" + getPageNumber()).addClass('active');
             $("#p" + getPageNumber()).siblings().removeClass('active');
-            
-            // scrollLink.each(function(){
-
-            // var sectionOffset = $(this.hash).offset().top
-
-            // if(sectionOffset <= scrollbarLocation){
-            //     $(this).addClass('active');
-            //     $(this).siblings().removeClass('active');
-            // } 
-            // })
-
-
+        };
+        
+        $(".container").scroll(function(){
+            changeActivePage();
         });
-
-
-    })
+        
+    });
     
+            // $(window).scroll(function() {
+            //     // console.log(getScrollBarLocation())
+            //     // console.log($('section#page-01 h1').offset());
+            //     // console.log(getScrollDirection())
+            // });
+            // scrollToPage( getScrollDirection() , getPageNumber() , 4)
+            
+            // $(window).on("mousewheel DOMMouseScroll", function(event) {
+            //     // console.log(getScrollDirection());
+            // });
+    
+            
+            // function getScrollDirection(event){
+            //     var st = $(this).scrollTop();
+            //     var direction = null;
+            //     if (st > lastScrollTop && isScrolling == false){
+            //         direction = "down"
+            //     } else if (st < lastScrollTop && isScrolling == false) {
+            //         direction = "up"
+            //     lastScrollTop = st;
+            //     return direction;
+            //     }
+    
+            // window.onscroll = () => {
+            //     const direction = this.oldScroll > this.scrollY ? 'up': 'down'
+            //     console.log(direction)
+            //     this.oldScroll = this.scrollY;
+            // }
+    
+            // function scrollToPage(ScrollDirection,pageNumber,maxPages){
+            //     if(ScrollDirection == "down" && pageNumber < maxPages){
+            //         $("#p" + (getPageNumber() + 1)).trigger('click'); 
+            //         console.log(ScrollDirection);
+            //         isScrolling = true;
+            //     }
+            //     else if(ScrollDirection == "up" && pageNumber > 1){
+            //         $("#p" + (getPageNumber() - 1)).trigger('click');
+            //         console.log(ScrollDirection)
+            //         isScrolling = true;
+            //     }
+            //     setTimeout(function(){isScrolling = false}, 750);
+            // }
 
+    // console.log(scrollbarLocation + "---" + pageHeight)
+    
+    // scrollLink.each(function(){
+
+    // var sectionOffset = $(this.hash).offset().top
+
+    // if(sectionOffset <= scrollbarLocation){
+    //     $(this).addClass('active');
+    //     $(this).siblings().removeClass('active');
+    // } 
+    // })
 
 
 </script>
