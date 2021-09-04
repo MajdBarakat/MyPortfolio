@@ -141,7 +141,7 @@
 <script>
     
     $(document).ready(function(){
-
+        
         var burger = $(".burger");
         var line1 = $(".line1");
         var line2 = $(".line2");
@@ -155,9 +155,21 @@
         var pageHeight = $(window).height();
         var lastScrollTop = 0;
         var isScrolling = false;
-
-
+        
+        
         changeActivePage();
+        
+        $(".container").scroll(function(){
+            changeActivePage();
+            console.log($("#p1").attr("class"))
+            if($("#p1").attr("class") == ""){
+                $(".scroll-container").transition({opacity:0,delay:0})
+            }else if($("#p1").attr("class") == "active"){
+                $(".scroll-container").transition({opacity:1,delay:0})
+            }
+        
+        });
+        
 
         function getPageNumber(){
             var scrollbarLocation = $(".container").scrollTop();
@@ -208,9 +220,6 @@
             $("#p" + getPageNumber()).siblings().removeClass('active');
         };
         
-        $(".container").scroll(function(){
-            changeActivePage();
-        });
         
     });
     
