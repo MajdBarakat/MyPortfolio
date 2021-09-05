@@ -161,16 +161,25 @@
         
         $(".container").scroll(function(){
             changeActivePage();
-            console.log($("#p1").attr("class"))
-            if($("#p1").attr("class") == ""){
-                $(".scroll-container").transition({opacity:0,delay:0})
-            }else if($("#p1").attr("class") == "active"){
-                $(".scroll-container").transition({opacity:1,delay:0})
-            }
-        
+            // fadeOut("#p1",".title-container")
         });
-        
 
+        $(".scroll-container").click(function(){
+            // fadeOut("#p1", ".scroll-container")
+        })
+
+        setInterval(fadeOut("#p1", ".scroll-container"));
+
+        function fadeOut(pageSelector, elementSelector ){
+            console.log($(pageSelector).attr("class"))
+            if($(pageSelector).attr("class") == "active"){
+                $(elementSelector).transition({x:"0vw",delay:0})
+            }else{
+                $(elementSelector).transition({x:"100vw",delay:0})
+            }
+        };
+    
+        
         function getPageNumber(){
             var scrollbarLocation = $(".container").scrollTop();
             return Math.round(scrollbarLocation/pageHeight) + 1;
@@ -180,13 +189,13 @@
             v1.transition({x:'0vw'});
             v2.transition({x:'0vw',delay: 200});
             v3.transition({x:'0vw',delay: 400});
-        }
+        };
         
         function slideOut(v1,v2,v3){
             v1.transition({x:'100vw',delay: 600});
             v2.transition({x:'100vw',delay: 400});
             v3.transition({x:'100vw',delay: 200});
-        }
+        };
         
         burger.click(function(){
             if(burger.attr("id") == "OFF"){
