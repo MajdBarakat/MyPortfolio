@@ -49,7 +49,9 @@
 
         <section id="page-01" class="page">
             <div class="title-container">
-                <h1>MAJD <br> BARAKAT</h1>
+                <div class="title-container2">
+                    <h1>MAJD <br> BARAKAT</h1>=
+                </div>
                 <h2>UI UX Web Developer</h2>
                 <div class="btn-container">
                     <a href="#page-02" class="btn1">My Projects</a>
@@ -158,26 +160,52 @@
         
         
         changeActivePage();
+        animationsOut();
         
         $(".container").scroll(function(){
             changeActivePage();
             // fadeOut("#p1",".title-container")
+            animationsOut();
+            // animationsIn();
         });
 
         $(".scroll-container").click(function(){
             // fadeOut("#p1", ".scroll-container")
         })
 
-        setInterval(fadeOut("#p1", ".scroll-container"));
+        // setInterval(fadeOut("#p1", ".scroll-container"));
 
-        function fadeOut(pageSelector, elementSelector ){
-            console.log($(pageSelector).attr("class"))
-            if($(pageSelector).attr("class") == "active"){
-                $(elementSelector).transition({x:"0vw",delay:0})
-            }else{
-                $(elementSelector).transition({x:"100vw",delay:0})
+        // function fadeOut(pageSelector, elementSelector ){
+        //     console.log($(pageSelector).attr("class"))
+        //     if($(pageSelector).attr("class") == "active"){
+        //         $(elementSelector).transition({x:"0vw",delay:0})
+        //     }else{
+        //         $(elementSelector).transition({x:"100vw",delay:0})
+        //     }
+        // };
+
+        function animationsOut(){
+            if($("#p1").attr("class") == ""){
+                console.log("inactive")
+                $("section#page-01 .title-container h1").transition({x : "-100vw"});
+            }else if($("#p1").attr("class") == "active"){
+                $("section#page-01 .title-container h1").transition({x : "0"});
+            // }else if($("#p3").attr("class") == ""){
+            // }else if($("#p4").attr("class") == ""){
             }
-        };
+        }
+
+        function animationsIn(){
+            if($("#p1").attr("class") == "active"){
+                $("section#page-01 .title-container h1").transition({x:"0"});
+            }else if($("#p2").attr("class") == "active"){
+                console.log("page2")
+            }else if($("#p3").attr("class") == "active"){
+                console.log("page3")
+            }else if($("#p4").attr("class") == "active"){
+                console.log("page4")
+            }
+        }
     
         
         function getPageNumber(){

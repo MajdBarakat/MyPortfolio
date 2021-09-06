@@ -295,7 +295,7 @@ section{
 
 
 section#page-01 .title-container h1{
-    
+    transform: translateX(-100vw);
 }
 
 section#page-01 .sphere-container{
