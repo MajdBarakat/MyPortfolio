@@ -49,13 +49,15 @@
 
         <section id="page-01" class="page">
             <div class="title-container">
-                <div class="title-container2">
-                    <h1>MAJD <br> BARAKAT</h1>=
+                <h1>MAJD <br> BARAKAT</h1>
+                <div class="overflow-container">
+                    <h2>UI UX Web Developer</h2>
                 </div>
-                <h2>UI UX Web Developer</h2>
-                <div class="btn-container">
-                    <a href="#page-02" class="btn1">My Projects</a>
-                    <a href="" class="btn2">Contact Me</a>
+                <div class="overflow-container">
+                    <div class="btn-container">
+                        <a href="#page-02" class="btn1">My Projects</a>
+                        <a href="" class="btn2">Contact Me</a>
+                    </div>
                 </div>
             </div>
             <div class="sphere-container">
@@ -160,19 +162,17 @@
         
         
         changeActivePage();
-        animationsOut();
+        setInterval(animationsOut,300);
         
         $(".container").scroll(function(){
             changeActivePage();
+            isScrolling = true;
             // fadeOut("#p1",".title-container")
-            animationsOut();
+            // animationsOut();
             // animationsIn();
         });
-
-        $(".scroll-container").click(function(){
-            // fadeOut("#p1", ".scroll-container")
-        })
-
+        
+        // fadeOut("#p1", ".scroll-container")
         // setInterval(fadeOut("#p1", ".scroll-container"));
 
         // function fadeOut(pageSelector, elementSelector ){
@@ -185,11 +185,16 @@
         // };
 
         function animationsOut(){
-            if($("#p1").attr("class") == ""){
-                console.log("inactive")
-                $("section#page-01 .title-container h1").transition({x : "-100vw"});
-            }else if($("#p1").attr("class") == "active"){
-                $("section#page-01 .title-container h1").transition({x : "0"});
+            if(getPageNumber() != 1){
+                $("section#page-01 .title-container h1").css({x : "-50vw"});
+                $("section#page-01 .title-container h2").css({y : "-50vh"});
+                $("section#page-01 .btn-container").css({y : "-50vh"});
+                $(".scroll-container").transition({opacity:0},300);
+            }else if(getPageNumber() == 1){
+                $("section#page-01 .title-container h1").transition({x : "0"},600);
+                $("section#page-01 .title-container h2").transition({y : "0", delay: 200},500);
+                $("section#page-01 .btn-container").transition({y : "0", delay: 200},500);
+
             // }else if($("#p3").attr("class") == ""){
             // }else if($("#p4").attr("class") == ""){
             }

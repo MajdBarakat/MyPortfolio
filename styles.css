@@ -294,9 +294,6 @@ section{
 /* Page 01 -------------------------------------------*/
 
 
-section#page-01 .title-container h1{
-    transform: translateX(-100vw);
-}
 
 section#page-01 .sphere-container{
     height:100vh;
@@ -348,3 +345,20 @@ section#page-01 .sphere{
     justify-self: center;
 }
 
+/* ANIMATIONS -------------------------------------------*/ 
+.overflow-container{
+    overflow: hidden;
+}
+.title-container h1{
+    transform: translateX(-50vw);
+}
+.title-container h2{
+    transform: translateY(-50vh);
+}
+.scroll-container{
+    /* transform: translateX(-10vw); */
+    opacity: 1;
+}
+.btn-container{
+    transform: translateY(-50vh);
+}
