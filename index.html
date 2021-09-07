@@ -87,10 +87,11 @@
             </div>
             <div class="project-container">
                 <div class="overflow-container">
-                    <h3>01</h3>
+                    <h3 class="from-bottom">01</h3>
                 </div>
                 <div class="project-bgd">
-                    <div class="project"></div>
+                    <div class="project-load from-right"></div>
+                    <div class="project-img from-right-delayed" id="1"></div>
                 </div>
             </div>
         </section>
@@ -111,10 +112,11 @@
             </div>
             <div class="project-container">
                 <div class="overflow-container">
-                    <h3>02</h3>
+                    <h3 class="from-bottom">02</h3>
                 </div>
                 <div class="project-bgd">
-                    <div class="project"></div>
+                    <div class="project-load from-right"></div>
+                    <div class="project-img from-right-delayed" id="2"></div>
                 </div>
             </div>  
         </section>
@@ -135,15 +137,14 @@
             </div>
             <div class="project-container">
                 <div class="overflow-container">
-                    <h3>03</h3>
+                    <h3 class="from-bottom">03</h3>
                 </div>
                 <div class="project-bgd">
-                    <div class="project"></div>
+                    <div class="project-load from-right"></div>
+                    <div class="project-img from-right-delayed" id="3"></div>
                 </div>
             </div>            
         </section>
-    
-
     </div>
     
 <!-- <script src="/aos-master/dist/aos.js"></script>
@@ -282,7 +283,10 @@
         // const sections = document.querySelectorAll("section")
         const titles = document.querySelectorAll("h1")
         const subTitles = document.querySelectorAll("h2")
+        const numbers = document.querySelectorAll("h3")
         const buttons = document.querySelectorAll(".btn-container")
+        const loads = document.querySelectorAll(".project-load")
+        const images = document.querySelectorAll(".project-img")
 
         const options = {
             root:null,
@@ -312,7 +316,19 @@
         buttons.forEach(button =>{
             appearOnScroll.observe(button);
         })
+
+        numbers.forEach(number => {
+            appearOnScroll.observe(number)
+        })
         
+        loads.forEach(load => {
+            appearOnScroll.observe(load)
+        })
+
+        images.forEach(image =>{
+            appearOnScroll.observe(image)
+        })
+
     });
     
             // $(window).scroll(function() {

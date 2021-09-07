@@ -336,11 +336,12 @@ section#page-01 .sphere{
     z-index: 1;
 }
 
-.project-container h3{
+.project-container .overflow-container{
     position:absolute;
     top:20%;
     left:11%;
     z-index: 20;
+    overflow: hidden;
 }
 
 .project-bgd{
@@ -351,6 +352,21 @@ section#page-01 .sphere{
     position: relative;
     align-self: center;
     justify-self: center;
+    overflow: hidden;
+}
+
+.project-load{
+    background-color: #FF4D5A;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.project-img{
+    background: url("/assets/stock-image1.jpg")no-repeat center center/cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
 }
 
 /* ANIMATIONS -------------------------------------------*/ 
@@ -364,22 +380,44 @@ section#page-01 .sphere{
     transform: translateY(-100%);
     opacity: 0;
 }
+.from-bottom{
+    transform: translateY(100%);
+}
+.from-right{
+    transform: translateX(99%);
+}
 .from-top-delayed{
     transform: translateY(-125%);
-
+}
+.from-right-delayed{
+    transform: translateX(99%);
+}
+.from-left.appear,
+.from-top.appear,
+.from-right.appear,
+.from-bottom.appear{
+    transform: translate(0);
 }
 .from-left.appear{
-    transform: translate(0);
     transition: transform 500ms ease-in;
 }
 .from-top.appear{
     opacity: 1;
-    transform: translateY(0);
     transition: transform 400ms ease-in 300ms, opacity 400ms ease-in 200ms;
+}
+.from-bottom.appear{
+    transition: transform 400ms ease-in 500ms;
+}
+.from-right.appear{
+    transition: transform 400ms ease-in ;
 }
 .from-top-delayed.appear{
     transform: translateY(0);
     transition: transform 400ms ease-in 600ms;
+}
+.from-right-delayed.appear{
+    transform: translateY(0);
+    transition: transform 400ms ease-in 100ms;
 }
 .scroll-container{
     /* transform: translateX(-10vw); */
