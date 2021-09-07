@@ -46,6 +46,14 @@ h2{
     opacity: 0.7;
     text-shadow: 0 10px 30px rgba(2, 11, 22, 0.5)
 }
+h3{
+    font-family: var(--primary-font);
+    font-size: 7.5rem;
+    margin: 10px;
+    line-height: 1;
+    color: var(--primary-text-color);
+    text-shadow: 0 10px 30px rgba(2, 11, 22, 0.5) 
+}
 
 .btn-container{
     display: flex;
@@ -328,7 +336,7 @@ section#page-01 .sphere{
     z-index: 1;
 }
 
-.project-container h1{
+.project-container h3{
     position:absolute;
     top:20%;
     left:11%;
@@ -349,16 +357,35 @@ section#page-01 .sphere{
 .overflow-container{
     overflow: hidden;
 }
-.title-container h1{
-    transform: translateX(-50vw);
+.from-left{
+    transform: translateX(-100%);
 }
-.title-container h2{
-    transform: translateY(-50vh);
+.from-top{
+    transform: translateY(-100%);
+    opacity: 0;
+}
+.from-top-delayed{
+    transform: translateY(-125%);
+
+}
+.from-left.appear{
+    transform: translate(0);
+    transition: transform 500ms ease-in;
+}
+.from-top.appear{
+    opacity: 1;
+    transform: translateY(0);
+    transition: transform 400ms ease-in 300ms, opacity 400ms ease-in 200ms;
+}
+.from-top-delayed.appear{
+    transform: translateY(0);
+    transition: transform 400ms ease-in 600ms;
 }
 .scroll-container{
     /* transform: translateX(-10vw); */
     opacity: 1;
 }
-.btn-container{
-    transform: translateY(-50vh);
+.btn-container a:hover{
+    opacity: 0.7;
+    transition: opacity 500ms;
 }

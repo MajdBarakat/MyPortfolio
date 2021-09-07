@@ -49,12 +49,12 @@
 
         <section id="page-01" class="page">
             <div class="title-container">
-                <h1>MAJD <br> BARAKAT</h1>
+                <h1 class="from-left">MAJD <br> BARAKAT</h1>
                 <div class="overflow-container">
-                    <h2>UI UX Web Developer</h2>
+                    <h2 class="from-top">UI UX Web Developer</h2>
                 </div>
                 <div class="overflow-container">
-                    <div class="btn-container">
+                    <div class="btn-container from-top-delayed">
                         <a href="#page-02" class="btn1">My Projects</a>
                         <a href="" class="btn2">Contact Me</a>
                     </div>
@@ -75,15 +75,20 @@
         
         <section id="page-02" class="page">
             <div  class="title-container">
-                <h1>Project <br> Name </h1>
-                <h2>Project Description</h2>
-                <div class="btn-container">
-                    <a href="" class="btn1">My Projects</a>
-                    <a href="" class="btn2">Contact Me</a>
+                <h1 class="from-left">Project <br> Name </h1>
+                <div class="overflow-container">
+                    <h2 class="from-top" >Project Description</h2>
+                </div>
+                <div class="overflow-container">
+                    <div class="btn-container from-top-delayed">
+                        <a href="" class="btn2">View Project</a>
+                    </div>
                 </div>
             </div>
             <div class="project-container">
-                <h1>#01</h1>
+                <div class="overflow-container">
+                    <h3>01</h3>
+                </div>
                 <div class="project-bgd">
                     <div class="project"></div>
                 </div>
@@ -94,15 +99,20 @@
         
         <section id="page-03" class="page">
             <div class="title-container">
-                <h1>Project <br> Name </h1>
-                <h2>Project Description</h2>
-                <div class="btn-container">
-                    <a href="" class="btn1">My Projects</a>
-                    <a href="" class="btn2">Contact Me</a>
+                <h1 class="from-left" >Project <br> Name </h1>
+                <div class="overflow-container">
+                    <h2 class="from-top">Project Description</h2>
+                </div>
+                <div class="overflow-container">
+                    <div class="btn-container from-top-delayed">
+                        <a href="" class="btn2">View Project</a>
+                    </div>
                 </div>
             </div>
             <div class="project-container">
-                <h1>#02</h1>
+                <div class="overflow-container">
+                    <h3>02</h3>
+                </div>
                 <div class="project-bgd">
                     <div class="project"></div>
                 </div>
@@ -113,15 +123,20 @@
         
         <section id="page-04" class="page">
             <div class="title-container">
-                <h1>Project <br> Name </h1>
-                <h2>Project Description</h2>
-                <div class="btn-container">
-                    <a href="" class="btn1">My Projects</a>
-                    <a href="" class="btn2">Contact Me</a>
+                <h1 class="from-left" >Project <br> Name </h1>
+                <div class="overflow-container">
+                    <h2 class="from-top">Project Description</h2>
+                </div>
+                <div class="overflow-container">
+                    <div class="btn-container from-top-delayed">
+                        <a href="" class="btn2">View Project</a>
+                    </div>
                 </div>
             </div>
             <div class="project-container">
-                <h1>#03</h1>
+                <div class="overflow-container">
+                    <h3>03</h3>
+                </div>
                 <div class="project-bgd">
                     <div class="project"></div>
                 </div>
@@ -162,11 +177,11 @@
         
         
         changeActivePage();
-        setInterval(animationsOut,300);
+        // setInterval(animationsOut,300);
         
         $(".container").scroll(function(){
             changeActivePage();
-            isScrolling = true;
+            $(".scroll-container").transition({x:"-200px",opacity:0})
             // fadeOut("#p1",".title-container")
             // animationsOut();
             // animationsIn();
@@ -184,33 +199,33 @@
         //     }
         // };
 
-        function animationsOut(){
-            if(getPageNumber() != 1){
-                $("section#page-01 .title-container h1").css({x : "-50vw"});
-                $("section#page-01 .title-container h2").css({y : "-50vh"});
-                $("section#page-01 .btn-container").css({y : "-50vh"});
-                $(".scroll-container").transition({opacity:0},300);
-            }else if(getPageNumber() == 1){
-                $("section#page-01 .title-container h1").transition({x : "0"},600);
-                $("section#page-01 .title-container h2").transition({y : "0", delay: 200},500);
-                $("section#page-01 .btn-container").transition({y : "0", delay: 200},500);
+        // function animationsOut(){
+        //     if(getPageNumber() != 1){
+        //         $("section#page-01 .title-container h1").css({x : "-50vw"});
+        //         $("section#page-01 .title-container h2").css({y : "-50vh"});
+        //         $("section#page-01 .btn-container").css({y : "-50vh"});
+        //         $(".scroll-container").transition({opacity:0},300);
+        //     }else if(getPageNumber() == 1){
+        //         $("section#page-01 .title-container h1").transition({x : "0"},600);
+        //         $("section#page-01 .title-container h2").transition({y : "0", delay: 200},500);
+        //         $("section#page-01 .btn-container").transition({y : "0", delay: 200},500);
 
             // }else if($("#p3").attr("class") == ""){
             // }else if($("#p4").attr("class") == ""){
-            }
-        }
+        //     }
+        // }
 
-        function animationsIn(){
-            if($("#p1").attr("class") == "active"){
-                $("section#page-01 .title-container h1").transition({x:"0"});
-            }else if($("#p2").attr("class") == "active"){
-                console.log("page2")
-            }else if($("#p3").attr("class") == "active"){
-                console.log("page3")
-            }else if($("#p4").attr("class") == "active"){
-                console.log("page4")
-            }
-        }
+        // function animationsIn(){
+        //     if($("#p1").attr("class") == "active"){
+        //         $("section#page-01 .title-container h1").transition({x:"0"});
+        //     }else if($("#p2").attr("class") == "active"){
+        //         console.log("page2")
+        //     }else if($("#p3").attr("class") == "active"){
+        //         console.log("page3")
+        //     }else if($("#p4").attr("class") == "active"){
+        //         console.log("page4")
+        //     }
+        // }
     
         
         function getPageNumber(){
@@ -262,6 +277,41 @@
             $("#p" + getPageNumber()).siblings().removeClass('active');
         };
         
+        /* JS animations n IntersectionObserver*/
+
+        // const sections = document.querySelectorAll("section")
+        const titles = document.querySelectorAll("h1")
+        const subTitles = document.querySelectorAll("h2")
+        const buttons = document.querySelectorAll(".btn-container")
+
+        const options = {
+            root:null,
+            threshold:0,
+        };
+
+        const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll){
+        entries.forEach(entry => {
+            if(!entry.isIntersecting){
+                console.log("not here")
+                entry.target.classList.remove("appear")
+            }else{
+                console.log("here")
+                entry.target.classList.add("appear")
+            }
+                });
+        }, options);
+
+        titles.forEach(title =>{
+            appearOnScroll.observe(title);
+        })
+
+        subTitles.forEach(subTitle =>{
+            appearOnScroll.observe(subTitle);
+        })
+
+        buttons.forEach(button =>{
+            appearOnScroll.observe(button);
+        })
         
     });
     
