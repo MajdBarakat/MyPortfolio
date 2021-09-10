@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -27,8 +27,8 @@
                 <div class="nav-left">
                     <a href="" class="logo">mb</a>
                     <div class="light-dark-modes">
-                        <div class="light-btn"></div>
-                        <div class="dark-btn"></div>
+                        <div class="" id="light-btn"></div>
+                        <div class="active" id="dark-btn"></div>
                     </div>
                 </div>
                 <div class="nav-right">
@@ -275,6 +275,21 @@
         //         scrollTop: $(this.hash).offset().top 
         //     },700);
         // });
+
+        $(".light-dark-modes").click(function(){
+            console.log("clicked")
+            if($("#dark-btn").hasClass("active") == true){
+                $("html").removeClass("dark")
+                $("html").addClass("light")
+                $("#light-btn").addClass("active");
+                $("#dark-btn").removeClass("active")
+            }else{
+                $("html").removeClass("light")
+                $("html").addClass("dark")
+                $("#dark-btn").addClass("active");
+                $("#light-btn").removeClass("active")
+            }
+        });
         
         function changeActivePage(){
             $("#p" + getPageNumber()).addClass('active');
@@ -299,10 +314,8 @@
         const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll){
         entries.forEach(entry => {
             if(!entry.isIntersecting){
-                console.log("not here")
                 entry.target.classList.remove("appear")
             }else{
-                console.log("here")
                 entry.target.classList.add("appear")
             }
                 });
