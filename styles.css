@@ -437,6 +437,13 @@ section{
     position: absolute;
 }
 
+/* .project-img{
+    background: url("/assets/stock-image1.jpg")no-repeat center center/cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+} */
+
 /* ANIMATIONS -------------------------------------------*/ 
 .overflow-container{
     overflow: hidden;
