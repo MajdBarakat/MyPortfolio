@@ -18,7 +18,7 @@
 }
 
 html.light{
-    background: url('assets/day-bgd.svg') no-repeat center center/cover;
+    background: url('assets/img/day-bgd.svg') no-repeat center center/cover;
     --primary-color: #EF7C72;
     --secondary-color: #072141;
     --light-color:white;
@@ -31,7 +31,7 @@ html.light{
 }
 
 html.dark{
-    background: url('assets/night-bgd.svg') no-repeat center center/cover;
+    background: url('assets/img/night-bgd.svg') no-repeat center center/cover;
     --primary-color: #072142 ;
     --secondary-color: #FF4D5A;
     --light-color:white;  
@@ -45,11 +45,11 @@ html.dark{
 }
 
 html.dark .sphere{
-    background:url(assets/night-sphere.svg)no-repeat center center/contain;
+    background:url(assets/img/night-sphere.svg)no-repeat center center/contain;
 }
 
 html.light .sphere{
-    background:url(assets/day-sphere.svg)no-repeat center center/contain;
+    background:url(assets/img/day-sphere.svg)no-repeat center center/contain;
 }
 
 /* Universal */
@@ -117,22 +117,22 @@ body{
     background-attachment: fixed;
 }
 
-.container{
+#fullpage{
     scroll-behavior:smooth;
     overflow-x: hidden;
     overflow-y: scroll;
-    scroll-snap-type: y mandatory;
+    /* scroll-snap-type: y mandatory; */
     height: 100vh;
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
-.container::-webkit-scrollbar {
+#fullpage::-webkit-scrollbar {
     display: none;
 }
 
 section{
     position: relative;
-    scroll-snap-align: center;
+    /* scroll-snap-align: center; */
     height: 100vh;
 }
 
@@ -154,7 +154,7 @@ section{
 }
 
 .scroll{
-    background: url(assets/night-scroll.svg) no-repeat center center/contain;
+    background: url(assets/img/night-scroll.svg) no-repeat center center/contain;
     width:40px;
     height: 90px;
     align-self: center;
@@ -308,7 +308,7 @@ section{
     display:none;
     height: 40px;
     width: 40px;
-    background: url("assets/night-btn.svg")no-repeat center center/cover;
+    background: url("assets/img/night-btn.svg")no-repeat center center/cover;
     transition: opacity 0.2s ease-in;
 }
 
@@ -316,7 +316,7 @@ section{
     display: none;
     height: 40px;
     width: 40px;
-    background: url("assets/day-btn.svg")no-repeat center center/cover;
+    background: url("assets/img/day-btn.svg")no-repeat center center/cover;
     transition: opacity 0.2s ease-in;
 }
 #light-btn.active,
@@ -431,7 +431,7 @@ section{
 }
 
 .project-img{
-    background: url("/assets/stock-image1.jpg")no-repeat center center/cover;
+    background: url("assets/img/stock-image1.jpg")no-repeat center center/cover;
     height: 100%;
     width: 100%;
     position: absolute;
