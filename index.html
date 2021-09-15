@@ -9,7 +9,14 @@
         <title>Majd Barakat Portfolio</title>
         <script src="assets/js/jquery.js"></script>
         <script src="assets/js/app.js"></script>
-        <script src="assets/js/jquery.fullPage.js"></script>
+        <script src="assets/js/jquery.scrollify.js"></script>
+        <script>
+            $(function() {
+              $.scrollify({
+                section : ".page"
+              });
+            });
+        </script>
     </head>
     <body>
     <div class="menu-box" id="mb1"></div>
@@ -58,7 +65,7 @@
         
         <!--- Landing Page #01 -->
         
-    <div id="fullpage">
+    <div class="container">
         
         <section id="page-01" class="page">
             <div class="title-container">
@@ -99,7 +106,7 @@
                     </div>
                     <div class="project-bgd">
                         <div class="project-load from-right"></div>
-                        <div class="project-img from-right-delayed" id="1"></div>
+                        <div class="project-img from-right-delayed" id="img-1"></div>
                     </div>
                 </div>
             </div>
@@ -126,7 +133,7 @@
                     </div>
                     <div class="project-bgd">
                         <div class="project-load from-right"></div>
-                        <div class="project-img from-right-delayed" id="2"></div>
+                        <div class="project-img from-right-delayed" id="img-2"></div>
                     </div>
                 </div>
             </div>  
@@ -153,7 +160,7 @@
                     </div>
                     <div class="project-bgd">
                         <div class="project-load from-right"></div>
-                        <div class="project-img from-right-delayed" id="3"></div>
+                        <div class="project-img from-right-delayed" id="img-3"></div>
                     </div>
                 </div>
             </div>            
@@ -182,13 +189,8 @@
         changeActivePage();
         // setInterval(animationsOut,300);
 
-        $('#fullpage').fullpage({
-		//options here
-		autoScrolling:true,
-		scrollHorizontally: true
-        });
 
-        $(".container").scroll(function(){
+        $(window).scroll(function(){
             changeActivePage();
             $(".scroll-container").transition({x:"-200px",opacity:0})
             // fadeOut("#p1",".title-container")
@@ -238,7 +240,7 @@
     
         
         function getPageNumber(){
-            var scrollbarLocation = $(".container").scrollTop();
+            var scrollbarLocation = $(window).scrollTop();
             return Math.round(scrollbarLocation/pageHeight) + 1;
         };
         

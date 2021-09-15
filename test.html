@@ -5,10 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="js/jquery.js"></script>
+    <script src="/assets/js/jquery.js"></script>
+    <script src="assets/js/jquery.scrollify.js"></script>
+    <script>
+
+        $(function() {
+          $.scrollify({
+            section : "section"
+          });
+        });
+
+    </script>
 </head>
 <body>
-    <div>
         <section class="p1">
             <h1 class="from-left">Page 1</h1>
         </section>
@@ -18,7 +27,7 @@
         <section class="p3">
             <h1 class="from-left">Page 3</h1>
         </section>
-    </div>
+
 </body>
 
 <style>
@@ -29,17 +38,13 @@
         font-size: 150px;
     }
     html{
-        overflow: hidden;
     }
     body{
         padding: 0;
         margin: 0;
-        overflow: hidden;
-        height: 300vh;
+        height: 100vh;
     }
     div{
-        scroll-snap-type:y mandatory;
-        overflow-y: scroll;
         overflow-x: hidden;
         height: 100vh;
     }
@@ -64,44 +69,36 @@
     .black{
         background-color: black;
     }
-    .from-left{
-        transform: translateX(-50vw);
-    }
-    .from-left.appear{
-        transform: translateX(0);
-        transition: transform 400ms ease-in;
-    }
-
 </style>
 
 <script>
 
-    const sectionOne = document.querySelector(".p1")
-    const sections = document.querySelectorAll("section")
-    const titles = document.querySelectorAll("h1")
+//     const sectionOne = document.querySelector(".p1")
+//     const sections = document.querySelectorAll("section")
+//     const titles = document.querySelectorAll("h1")
 
-    const options = {
-        root:null,
-        threshold:0.25,
-    };
+//     const options = {
+//         root:null,
+//         threshold:0.25,
+//     };
 
-    const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll){
-        entries.forEach(entry => {
-            if(!entry.isIntersecting){
-                entry.target.classList.remove("appear")
-            }else{
-                entry.target.classList.add("appear")
-            }
-                });
-    }, options);
+//     const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll){
+//         entries.forEach(entry => {
+//             if(!entry.isIntersecting){
+//                 entry.target.classList.remove("appear")
+//             }else{
+//                 entry.target.classList.add("appear")
+//             }
+//                 });
+//     }, options);
 
-sections.forEach(section => {
-    appearOnScroll.observe(section);
-});
+// sections.forEach(section => {
+//     appearOnScroll.observe(section);
+// });
 
-titles.forEach(title =>{
-    appearOnScroll.observe(title);
-})
+// titles.forEach(title =>{
+//     appearOnScroll.observe(title);
+// })
 
 </script>
 </html>

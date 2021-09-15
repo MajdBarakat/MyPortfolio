@@ -10,6 +10,7 @@
 }
 
 :root {
+    scroll-behavior: smooth;
     /*  MAX-VALUES  */
     --max-width: 1440px;
     /*  FONTS  */
@@ -19,6 +20,7 @@
 
 html.light{
     background: url('assets/img/day-bgd.svg') no-repeat center center/cover;
+    background-attachment: fixed;
     --primary-color: #EF7C72;
     --secondary-color: #072141;
     --light-color:white;
@@ -32,6 +34,7 @@ html.light{
 
 html.dark{
     background: url('assets/img/night-bgd.svg') no-repeat center center/cover;
+    background-attachment: fixed;
     --primary-color: #072142 ;
     --secondary-color: #FF4D5A;
     --light-color:white;  
@@ -106,27 +109,23 @@ a{
     text-decoration: none;
 }
 
-html,body{
-    overflow: hidden;
+html{
 }
+
 body{
     margin: 0;
     overflow-x: hidden;
     width: max(100vw);
     height: 100vh;
-    background-attachment: fixed;
 }
 
-#fullpage{
-    scroll-behavior:smooth;
-    overflow-x: hidden;
-    overflow-y: scroll;
+.container{
     /* scroll-snap-type: y mandatory; */
     height: 100vh;
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
-#fullpage::-webkit-scrollbar {
+.container::-webkit-scrollbar {
     display: none;
 }
 
@@ -431,18 +430,20 @@ section{
 }
 
 .project-img{
-    background: url("assets/img/stock-image1.jpg")no-repeat center center/cover;
     height: 100%;
     width: 100%;
     position: absolute;
 }
 
-/* .project-img{
-    background: url("/assets/stock-image1.jpg")no-repeat center center/cover;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-} */
+.project-bgd #img-1{
+    background: url("assets/img/stock-image1.jpg")no-repeat center center/cover;
+}
+.project-bgd #img-2{
+    background: url("assets/img/stock-image4.jpg")no-repeat center center/cover;
+}
+.project-bgd #img-3{
+    background: url("assets/img/stock-image3.jpg")no-repeat center center/cover;
+}
 
 /* ANIMATIONS -------------------------------------------*/ 
 .overflow-container{
