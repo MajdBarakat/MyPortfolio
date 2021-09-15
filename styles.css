@@ -435,7 +435,7 @@ section{
     position: absolute;
 }
 
-.project-bgd #img-1{
+/* .project-bgd #img-1{
     background: url("assets/img/stock-image1.jpg")no-repeat center center/cover;
 }
 .project-bgd #img-2{
@@ -443,7 +443,7 @@ section{
 }
 .project-bgd #img-3{
     background: url("assets/img/stock-image3.jpg")no-repeat center center/cover;
-}
+} */
 
 /* ANIMATIONS -------------------------------------------*/ 
 .overflow-container{
