@@ -122,11 +122,6 @@ body{
 .container{
     /* scroll-snap-type: y mandatory; */
     height: 100vh;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-}
-.container::-webkit-scrollbar {
-    display: none;
 }
 
 section{

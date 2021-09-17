@@ -5,20 +5,11 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles.css">
-        <link rel="stylesheet" href="assets/css/jquery.fullPage.css" />
+        <link rel="stylesheet" href="assets/css/fullpage.css" />
         <title>Majd Barakat Portfolio</title>
         <script src="assets/js/jquery.js"></script>
         <script src="assets/js/app.js"></script>
-        <script src="assets/js/jquery.scrollify.js"></script>
-        <script>
-            $(function() {
-              $.scrollify({
-                section : ".page",
-                scrollbars: false,
-                
-              });
-            });
-        </script>
+        <script src="assets/js/fullpage.js"></script>
     </head>
     <body>
     <div class="menu-box" id="mb1"></div>
@@ -185,7 +176,6 @@
         var scrollLink = $(".page-selector a");
         var pageHeight = $(window).height();
         var lastScrollTop = 0;
-        var isScrolling = false;
         
         
         changeActivePage();

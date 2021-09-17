@@ -4,101 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/fullpage.css">
     <script src="/assets/js/jquery.js"></script>
-    <script src="assets/js/jquery.scrollify.js"></script>
-    <script>
-
-        $(function() {
-          $.scrollify({
-            section : "section"
-          });
-        });
-
-    </script>
+    <script src="assets/js/fullpage.js"></script>
+    <title>Document</title>
 </head>
 <body>
-        <section class="p1">
-            <h1 class="from-left">Page 1</h1>
-        </section>
-        <section class="p2">
-            <h1 class="from-left">Page 2</h1>
-        </section>
-        <section class="p3">
-            <h1 class="from-left">Page 3</h1>
-        </section>
+    <div id="fullpage">
+        <div class="section">Some section</div>
+        <div class="section">Some section</div>
+        <div class="section">Some section</div>
+        <div class="section">Some section</div>
+    </div>
 
+    <script>
+        $(document).ready(function() {
+            $('#fullpage').fullpage({
+                licenseKey:'CE258BFD-BC7446BF-977D67B5-29578706',
+            });
+
+            //methods
+            $.fn.fullpage.setAllowScrolling(false);
+        });
+    </script>
 </body>
 
 <style>
-    h1{
-        color: white;
-        margin:0;
-        align-self: center;
-        font-size: 150px;
+    #fullpage{
+        /* overflow-y: scroll; */
     }
-    html{
-    }
-    body{
-        padding: 0;
-        margin: 0;
-        height: 100vh;
-    }
-    div{
-        overflow-x: hidden;
-        height: 100vh;
-    }
-    section{
-        display: flex;
-        width: 100vw;
-        height: 100vh;
-        margin: 0;
-        justify-content: center;
-        scroll-snap-align: start;
-        scroll-snap-stop: always;
-    }
-    .p1{
-        background-color: silver;
-    }
-    .p2{
-        background-color: darkgrey;
-    }
-    .p3{
-        background-color: grey;
-    }
-    .black{
-        background-color: black;
+    .section{
+        height: 50vh;
+        background-color: brown;
     }
 </style>
-
-<script>
-
-//     const sectionOne = document.querySelector(".p1")
-//     const sections = document.querySelectorAll("section")
-//     const titles = document.querySelectorAll("h1")
-
-//     const options = {
-//         root:null,
-//         threshold:0.25,
-//     };
-
-//     const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll){
-//         entries.forEach(entry => {
-//             if(!entry.isIntersecting){
-//                 entry.target.classList.remove("appear")
-//             }else{
-//                 entry.target.classList.add("appear")
-//             }
-//                 });
-//     }, options);
-
-// sections.forEach(section => {
-//     appearOnScroll.observe(section);
-// });
-
-// titles.forEach(title =>{
-//     appearOnScroll.observe(title);
-// })
-
-</script>
 </html>
