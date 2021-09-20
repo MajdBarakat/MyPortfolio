@@ -11,7 +11,7 @@
 </head>
 <body>
     <div id="fullpage">
-        <div class="section">Some section</div>
+        <div class="section 1">Some section</div>
         <div class="section">Some section</div>
         <div class="section">Some section</div>
         <div class="section">Some section</div>
@@ -22,19 +22,15 @@
             $('#fullpage').fullpage({
                 licenseKey:'CE258BFD-BC7446BF-977D67B5-29578706',
             });
-
-            //methods
-            $.fn.fullpage.setAllowScrolling(false);
         });
     </script>
 </body>
 
 <style>
     #fullpage{
-        /* overflow-y: scroll; */
+        /* overflow-x: scroll; */
     }
-    .section{
-        height: 50vh;
+    .section1{
         background-color: brown;
     }
 </style>

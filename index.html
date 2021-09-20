@@ -50,17 +50,17 @@
         </footer>
 
         <div class="page-selector">
-            <a href="#page-01" class="" id='p1'></a>
-            <a href="#page-02" class="" id='p2'></a>
-            <a href="#page-03" class="" id='p3'></a>
-            <a href="#page-04" class="" id='p4'></a>
+            <a href="#page-01" class="active" id='p0'></a>
+            <a href="#page-02" class="" id='p1'></a>
+            <a href="#page-03" class="" id='p2'></a>
+            <a href="#page-04" class="" id='p3'></a>
         </div>
         
         <!--- Landing Page #01 -->
         
     <div class="container">
         
-        <section id="page-01" class="page">
+        <section id="page-01" class="section">
             <div class="title-container">
                 <h1 class="from-left">MAJD <br> BARAKAT</h1>
                 <div class="overflow-container">
@@ -80,7 +80,7 @@
         
         <!---  Page #02 -->
         
-        <section id="page-02" class="page">
+        <section id="page-02" class="section">
             <div  class="title-container">
                 <h1 class="from-left">Project <br> Name </h1>
                 <div class="overflow-container">
@@ -107,7 +107,7 @@
         
         <!---  Page #03 -->
         
-        <section id="page-03" class="page">
+        <section id="page-03" class="section">
             <div class="title-container">
                 <h1 class="from-left" >Project <br> Name </h1>
                 <div class="overflow-container">
@@ -134,7 +134,7 @@
         
         <!---  Page #04 -->
         
-        <section id="page-04" class="page">
+        <section id="page-04" class="section">
             <div class="title-container">
                 <h1 class="from-left" >Project <br> Name </h1>
                 <div class="overflow-container">
@@ -156,8 +156,9 @@
                         <div class="project-img from-right-delayed" id="img-3"></div>
                     </div>
                 </div>
-            </div>            
+            </div>
         </section>
+
     </div>
 
 <script>
@@ -178,12 +179,22 @@
         var lastScrollTop = 0;
         
         
-        changeActivePage();
         // setInterval(animationsOut,300);
-
-
-        $(window).scroll(function(){
+        
+        $('html').bind('mousewheel DOMMouseScroll', function (e) {
+            console.log(getPageNumber())
             changeActivePage();
+        });
+        
+        $(document).ready(function() {
+            $('.container').fullpage({
+                licenseKey:'CE258BFD-BC7446BF-977D67B5-29578706',
+            });
+        });
+        
+        
+        $(".container").scroll(function(){
+            console.log("scrolling")
             $(".scroll-container").transition({x:"-200px",opacity:0})
             // fadeOut("#p1",".title-container")
             // animationsOut();
@@ -232,8 +243,8 @@
     
         
         function getPageNumber(){
-            var scrollbarLocation = $(window).scrollTop();
-            return Math.round(scrollbarLocation/pageHeight) + 1;
+            var className = $("body").attr('class');
+            return className.substr(className.length - 1);
         };
         
         function slideIn(v1,v2,v3){
