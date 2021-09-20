@@ -50,17 +50,17 @@
         </footer>
 
         <div class="page-selector">
-            <a href="#page-01" class="active" id='p0'></a>
-            <a href="#page-02" class="" id='p1'></a>
-            <a href="#page-03" class="" id='p2'></a>
-            <a href="#page-04" class="" id='p3'></a>
+            <a href="#page-01" class="active" id='p1'></a>
+            <a href="#page-02" class="" id='p2'></a>
+            <a href="#page-03" class="" id='p3'></a>
+            <a href="#page-04" class="" id='p4'></a>
         </div>
         
         <!--- Landing Page #01 -->
         
     <div class="container">
         
-        <section id="page-01" class="section">
+        <section id="" class="section">
             <div class="title-container">
                 <h1 class="from-left">MAJD <br> BARAKAT</h1>
                 <div class="overflow-container">
@@ -80,7 +80,7 @@
         
         <!---  Page #02 -->
         
-        <section id="page-02" class="section">
+        <section id="" class="section">
             <div  class="title-container">
                 <h1 class="from-left">Project <br> Name </h1>
                 <div class="overflow-container">
@@ -107,7 +107,7 @@
         
         <!---  Page #03 -->
         
-        <section id="page-03" class="section">
+        <section id="" class="section">
             <div class="title-container">
                 <h1 class="from-left" >Project <br> Name </h1>
                 <div class="overflow-container">
@@ -134,7 +134,7 @@
         
         <!---  Page #04 -->
         
-        <section id="page-04" class="section">
+        <section id="" class="section">
             <div class="title-container">
                 <h1 class="from-left" >Project <br> Name </h1>
                 <div class="overflow-container">
@@ -179,23 +179,21 @@
         var lastScrollTop = 0;
         
         
-        // setInterval(animationsOut,300);
+        setInterval(changeActivePage,100);
         
         $('html').bind('mousewheel DOMMouseScroll', function (e) {
-            console.log(getPageNumber())
-            changeActivePage();
+            $(".scroll-container").transition({x:"-200px",opacity:0})
         });
         
-        $(document).ready(function() {
-            $('.container').fullpage({
-                licenseKey:'CE258BFD-BC7446BF-977D67B5-29578706',
-            });
+        
+        $('.container').fullpage({
+            licenseKey:'CE258BFD-BC7446BF-977D67B5-29578706',
+            anchors: ['page-01', 'page-02', 'page-03', 'page-04'],
         });
         
         
         $(".container").scroll(function(){
             console.log("scrolling")
-            $(".scroll-container").transition({x:"-200px",opacity:0})
             // fadeOut("#p1",".title-container")
             // animationsOut();
             // animationsIn();
@@ -240,7 +238,8 @@
         //         console.log("page4")
         //     }
         // }
-    
+
+
         
         function getPageNumber(){
             var className = $("body").attr('class');
