@@ -10,7 +10,8 @@ $(document).ready(function(){
     var navMenu = $(".nav-menu");
     var menuBtns = $(".nav-menu li a");
 
-    
+    $(window).resize(function(){location.reload();});
+
     function slideIn(v1,v2,v3){
         v1.transition({x:'0vw'});
         v2.transition({x:'0vw',delay: 200});
@@ -26,9 +27,9 @@ $(document).ready(function(){
     burger.click(function(){
         if(burger.attr("id") == "OFF"){
             burger.attr("id","ON");
-            line1.transition({rotate:'45', y:"21px"});
+            line1.transition({rotate:'45', y:"1.3rem"});
             line2.transition({x:"-50px",opacity:0});
-            line3.transition({rotate:'-45deg' , y:"-21px"});
+            line3.transition({rotate:'-45deg' , y:"-1.3rem"});
             slideIn(mb1,mb2,mb3);
             navMenu.transition({x:'0vw',delay: 600});
             menuBtns.transition({y:"0px",delay:700});

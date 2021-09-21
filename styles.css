@@ -63,6 +63,26 @@ html.light .scroll{
     background: url(assets/img/day-scroll.svg) no-repeat center center/contain;
 }
 
+html.dark .twitter{
+    background: url("assets/img/twitter-icon-night.svg")no-repeat center center/contain;
+}
+html.dark .github{
+    background: url("assets/img/github-icon-night.svg")no-repeat center center/contain;
+}
+html.dark .linkedin{
+    background: url("assets/img/linkedin-icon-night.svg")no-repeat center center/contain;
+}
+
+html.light .twitter{
+    background: url("assets/img/twitter-icon-day.svg")no-repeat center center/contain;
+}
+html.light .github{
+    background: url("assets/img/github-icon-day.svg")no-repeat center center/contain;
+}
+html.light .linkedin{
+    background: url("assets/img/linkedin-icon-day.svg")no-repeat center center/contain;
+}
+
 /* Universal */
 
 h1{
@@ -77,7 +97,7 @@ h1{
 h2{
     font-family: var(--primary-font);
     font-size: 3.1rem;
-    margin: 0 10px 10px 20px;
+    margin: 0 10px 15px 10px;
     line-height: 1;
     color: var(--secondary-text-color);
     opacity: 0.7;
@@ -94,7 +114,7 @@ h3{
 
 .btn-container{
     display: flex;
-    margin: 20px 20px;
+    margin: 10px 10px;
     gap:30px;
 }
 
@@ -141,15 +161,14 @@ section{
 .footer-container{
     width: 100%;
     position:fixed;
-    display:flex;
     z-index: 20;
-    top: 80vh;
+    bottom: 0;
 }
 
 .scroll-container{
     width:100px;
-    height: 200px;
-    margin: 0 40px;
+    height: 120px;
+    margin: 20px 20px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -224,7 +243,7 @@ section{
 
 .nav-menu li{
     font-family: var(--secondary-font);
-    font-size: clamp(80px,10vw,135px);
+    font-size: clamp(5rem,10vw,135px);
     font-weight: 500;
     text-align: center;
     overflow: hidden;
@@ -345,16 +364,11 @@ section{
 .social-media a{
     height: 30px;
     width: 40px;
+    transition: opacity 0.2s ease-in;
 }
 
-.twitter{
-    background: url("assets/img/twitter-icon-night.svg")no-repeat center center/contain;
-}
-.github{
-    background: url("assets/img/github-icon-night.svg")no-repeat center center/contain;
-}
-.linkedin{
-    background: url("assets/img/linkedin-icon-night.svg")no-repeat center center/contain;
+.social-media a:hover{
+    opacity: 0.7;
 }
 
 .burger{
@@ -462,7 +476,7 @@ section{
     position: absolute;
 }
 
-/* .project-bgd #img-1{
+.project-bgd #img-1{
     background: url("assets/img/stock-image1.jpg")no-repeat center center/cover;
 }
 .project-bgd #img-2{
@@ -470,7 +484,7 @@ section{
 }
 .project-bgd #img-3{
     background: url("assets/img/stock-image3.jpg")no-repeat center center/cover;
-} */
+}
 
 /* ANIMATIONS -------------------------------------------*/ 
 .overflow-container{
@@ -490,7 +504,7 @@ section{
     transform: translateX(99%);
 }
 .from-top-delayed{
-    transform: translateY(-125%);
+    transform: translateY(-110%);
 }
 .from-right-delayed{
     transform: translateX(99%);
@@ -535,25 +549,68 @@ section{
 
 /* Phones -------*/
 @media screen and (max-width: 650px){
+    #landing-page a.btn1,
+    #landing-page a.btn2{
+        font-size: 0.8rem;
+        white-space: nowrap;
+        padding: 12px 40px;
+    }
+    .btn-container{
+        gap:10px;
+        margin-top:5px
+    }
     .title-container{
         position: relative;
-        top:80px;
-        display: flex;
+        top:20px;
         height: 45vh;
+        justify-content: center;
     }
-    
+    :root{
+        font-size: 11px;
+    }
     h1{
-        font-size: 20vw;
+        font-size: clamp(5.4rem,18vw,10.9rem);
     }
     h2{
-        margin-left: 10px;
-        font-size: min(8vw,43px);
+        font-size: clamp(2.5rem,8vw,4.5rem);
     }
+    
+    a.btn1,
+    a.btn2{
+        padding: 15px 45px;
+    }
+    
+    .navbar-container{
+        padding: 15px 20px 0 20px;
+    }
+    .logo{
+        margin: 0;
+    }
+    
+    .burger{
+        margin: 0;
+        padding-top: 2px;
+    }
+    .burger div{
+        width: 30px;
+        height: 4px;
+        margin: 5px;
+    }
+    
+    .page-selector{
+        top: 30vh;
+    }
+    
+    .page-selector a{
+        width: 4px;
+        margin: 10px 0;
+    }
+    
     .project-container{
         position: relative;
         width: 100vw;
         left: 0%;
-        height: 40vh;
+        height: 45vh;
     }
     .p-c{
         width:85%;
@@ -563,11 +620,36 @@ section{
     }
     .p-c .overflow-container{
         left:60%;
-        top:-80px;
+        top:-60px;
     }
     section{
         display: flex;
         flex-direction: column;
         gap: 10vh;
+    }
+    .from-top-delayed{
+        transform: translateY(-105%);
+    }
+    .light-dark-modes{
+        margin-left: 10px;
+        align-items:flex-start;
+    }
+    #dark-btn,
+    #light-btn{
+        height: 30px;
+        width: 30px;
+        margin-top: 7px;
+    }
+    .social-media{
+        align-items: flex-start;
+    }
+    .social-media a{
+        height: 25px;
+        width: 35px;
+        margin-top: 7px;
+    }
+    #ON{
+        transform: translateX(10px);
+        transition: transform ease-in 200ms; ;
     }
 }
