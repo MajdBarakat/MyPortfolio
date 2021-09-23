@@ -34,6 +34,11 @@
                     </div>
                 </div>
                 <div class="nav-right">
+                    <li class="social-media">
+                        <a href="" class="twitter"></a>
+                        <a href="" class="github"></a>
+                        <a href="" class="linkedin"></a>
+                    </li>
                     <a class="burger" id="OFF">
                         <div class="line1"></div>
                         <div class="line2"></div>
@@ -43,13 +48,179 @@
             </div>
         </header>
 
-        <!--- Landing Page #01 -->
+        <!--- Contact Page #01 -->
         
-    <div class="container">
+    <div class="contact-container">
+        <div class="contact-content">
+            <h4>CONTACT</h4>
+            <h4 class="my-email">vaxion<span>.</span>dev<span>@</span>gmail<span>.</span>com</h4>
+            <form id="my-form" action="https://formspree.io/f/xrgrjjne" method="POST">
+                <input autocomplete="off" type="text" id="name" name="name" placeholder="Name">
         
+                <input type="email" id="email" name="email" placeholder="Email">
+        
+                <input autocomplete="off" type="text" id="subject" name="subject" placeholder="Subject">
+        
+                <textarea autocomplete="off" type ="text" name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
 
-
+                <button type="submit" >Submit</button>
+                
+                <p id="status" style="color: white;"></p>
+            </form>
+        </div>
     </div>
 
+    <script>
+        var form = document.getElementById("my-form");
+        async function handleSubmit(event) {
+          event.preventDefault();
+          var status = document.getElementById("status");
+          var data = new FormData(event.target);
+          fetch(event.target.action, {
+            method: form.method,
+            body: data,
+            headers: {
+                'Accept': 'application/json'
+            }
+          }).then(response => {
+            status.innerHTML = "Thanks for your submission!";
+            form.reset()
+          }).catch(error => {
+            status.innerHTML = "Oops! There was a problem submitting your form"
+          });
+        }
+        form.addEventListener("submit", handleSubmit)
+    </script>
 </body>
+
+<style>
+
+    h4{
+        font-family: var(--secondary-font);
+        font-size: 3rem;
+        font-weight: 600;
+        margin: 0;
+        color: white;
+    }
+    h4 span{
+        color: #FF4D5A;
+    }
+    h4.my-email{
+        font-size: min(3rem,6.5vw);
+    }
+    .contact-container{
+        height: 100vh;
+        width: 100vw;
+        align-self: center;
+        justify-self: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+    .contact-content{
+        height: 70%;
+        width: min(80%, var(--max-width ));
+        /* background: rgba(125, 125, 125, 0.7); */
+        position: absolute;
+        top: max(20vh, 100px);
+    }
+    form{
+        margin-top: 1.2rem;
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(2, calc(50% - 10px));
+        grid-template-rows: repeat(3, clamp(60px,5vw,85px)) 50px;
+        row-gap: 20px;
+        column-gap: 20px;
+        grid-template-areas:
+        "name message" 
+        "email message"
+        "subject message"
+        "blank submit";
+    }
+    input{
+        background: rgba(125, 125, 125, 0.1);
+        padding: 10px;
+        border-style: solid ;
+    }
+    [type = "text"],
+    [type = "email"]{
+        font-family: var(--secondary-font);
+        font-size: 1.2rem;
+        color: white;
+    }
+    [type = "text"]:focus,
+    [type = "email"]:focus{
+        outline: 0px solid #FF4D5A;
+    }
+    input::placeholder,
+    textarea::placeholder{
+        font-family: var(--secondary-font);
+        font-size: 1.2rem;
+        color: white;
+        opacity: 0.8;
+    }
+    #name{
+        grid-area: name;
+    }
+    #email{
+        grid-area: email;
+    }
+    #subject{
+        grid-area: subject;
+    }
+    textarea{
+        background: rgba(125, 125, 125, 0.1);
+        grid-area: message;
+        resize: none;
+        padding: 10px;
+        margin: 0;
+        border-style: solid ;
+    }
+    button{
+        grid-area: submit;
+        width: 220px;
+        margin-left: calc(100% - 220px);
+        color: var(--primary-color);
+        background: #FF4D5A;
+        border: none;
+        font-family: var(--secondary-font);
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+    button:hover{
+        cursor: pointer;
+        opacity: 0.7;
+        transition: opacity 200ms ease-in
+    }
+    @media screen and (max-width: 650px){
+        form{
+            grid-template-columns: calc(100%);
+            grid-template-rows: repeat(6, clamp(50px,5vw,85px)) 50px;
+            grid-template-areas:
+            "name" 
+            "email"
+            "subject"
+            "message"
+            "message"
+            "message"
+            "submit"
+            "blank";
+        }
+        h4.my-email{
+            font-size: 6.5vw;
+        }
+        .contact-content{
+            top: max(10vh, 75px);
+        }
+        button{
+            width: 175px;
+            margin-left: calc(100% - 175px);
+        }
+    }
+
+
+</style>
+
 </html>

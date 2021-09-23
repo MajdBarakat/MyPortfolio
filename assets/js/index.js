@@ -46,7 +46,7 @@ $(document).ready(function(){
     const numbers = document.querySelectorAll("h3")
     const buttons = document.querySelectorAll(".btn-container")
     const loads = document.querySelectorAll(".project-load")
-    const images = document.querySelectorAll(".project-img")
+    const covers = document.querySelectorAll(".project-img-cover")
     
     const options = {
         root:null,
@@ -83,8 +83,8 @@ $(document).ready(function(){
         appearOnScroll.observe(load)
     })
     
-    images.forEach(image =>{
-        appearOnScroll.observe(image)
+    covers.forEach(cover =>{
+        appearOnScroll.observe(cover)
     })
     
 });

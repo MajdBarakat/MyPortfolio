@@ -44,10 +44,10 @@ $(document).ready(function(){
         }
     });
 
-    $('#ContactMe').click(function(){
-        burger.trigger("click");
-        window.navigate("contact-me.html");
-    })
+    // $('#ContactMe').click(function(){
+    //     burger.trigger("click");
+    //     window.navigate("contact-me.html");
+    // })
     
 });
 
