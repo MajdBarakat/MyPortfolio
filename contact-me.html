@@ -48,30 +48,35 @@
             </div>
         </header>
 
-        <!--- Contact Page #01 -->
+        <!-- Contact Page -->
         
     <div class="contact-container">
         <div class="contact-content">
             <h4>CONTACT</h4>
-            <h4 class="my-email">vaxion<span>.</span>dev<span>@</span>gmail<span>.</span>com</h4>
-            <form id="my-form" action="https://formspree.io/f/xrgrjjne" method="POST">
-                <input autocomplete="off" type="text" id="name" name="name" placeholder="Name">
+            <a href="mailto: vaxion.dev@gmail.com">
+                <h4 class="my-email">vaxion<span>.</span>dev<span>@</span>gmail<span>.</span>com</h4>
+            </a>
+            <form id="my-form" action="https://formspree.io/f/xwkayzgz" method="POST">
+                <input autocomplete="off" type="text" id="name" name="name" placeholder="Name" required>
         
-                <input type="email" id="email" name="email" placeholder="Email">
+                <input type="email" id="email" name="email" placeholder="Email" required>
         
-                <input autocomplete="off" type="text" id="subject" name="subject" placeholder="Subject">
+                <input autocomplete="off" type="text" id="subject" name="subject" placeholder="Subject" required>
         
-                <textarea autocomplete="off" type ="text" name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+                <textarea autocomplete="off" type ="text" name="message" id="message" cols="30" rows="10" placeholder="Message" required></textarea>
 
-                <button type="submit" >Submit</button>
-                
-                <p id="status" style="color: white;"></p>
+                <button type="submit">Submit</button>
+                <div class="status-container">
+                    <div class="" id="icon"></div>
+                    <p id="status"></p>
+                </div>
             </form>
         </div>
     </div>
 
     <script>
         var form = document.getElementById("my-form");
+        var icon = document.getElementById("icon");
         async function handleSubmit(event) {
           event.preventDefault();
           var status = document.getElementById("status");
@@ -83,9 +88,11 @@
                 'Accept': 'application/json'
             }
           }).then(response => {
+            icon.classList.add("success");
             status.innerHTML = "Thanks for your submission!";
             form.reset()
           }).catch(error => {
+            icon.classList.add("error");
             status.innerHTML = "Oops! There was a problem submitting your form"
           });
         }
@@ -95,18 +102,63 @@
 
 <style>
 
+    html.dark input,
+    html.dark textarea{
+        background: rgba(125, 125, 125, 0.1);
+    }
+    html.light input,
+    html.light textarea{
+        background: rgba(0, 0, 0, 0.1);
+    }
+    html.light button{
+        color: white;
+    }
+    html.dark button{
+        color: #072141;
+    }
+
     h4{
+        text-shadow: 0 10px 10px var(--text-shadow-color);
         font-family: var(--secondary-font);
         font-size: 3rem;
         font-weight: 600;
         margin: 0;
-        color: white;
+        color: var(--primary-text-color);
+    }
+    .status-container{
+        display: flex;
+        justify-content: center;
+    }
+    #icon{
+        margin-right: 5px;
+    }
+    .error{
+        height: 40px;
+        width: 40px;
+        background: url(assets/img/error.svg)no-repeat center center/contain;
+    }
+    .success{
+        height: 30px;
+        width: 30px;
+        background: url(assets/img/tick.svg)no-repeat center center/contain;
+    }
+    p{
+        margin: 0;
+        margin-top: 2px;
     }
     h4 span{
         color: #FF4D5A;
     }
-    h4.my-email{
+    .my-email{
         font-size: min(3rem,6.5vw);
+        transition: opacity 200ms ease-in;
+        color: white;
+        text-shadow: 2px 2px 2px black;
+
+
+    }
+    .my-email:hover{
+        opacity: 0.7;
     }
     .contact-container{
         height: 100vh;
@@ -137,28 +189,26 @@
         "name message" 
         "email message"
         "subject message"
-        "blank submit";
-    }
-    input{
-        background: rgba(125, 125, 125, 0.1);
-        padding: 10px;
-        border-style: solid ;
+        "status submit";
     }
     [type = "text"],
-    [type = "email"]{
+    [type = "email"],
+    p{
         font-family: var(--secondary-font);
         font-size: 1.2rem;
-        color: white;
+        color: var(--primary-text-color);
     }
+
     [type = "text"]:focus,
-    [type = "email"]:focus{
-        outline: 0px solid #FF4D5A;
+    [type = "email"]:focus,
+    button:focus{
+        outline: 1px solid var(--primary-text-color);
     }
+
     input::placeholder,
     textarea::placeholder{
         font-family: var(--secondary-font);
         font-size: 1.2rem;
-        color: white;
         opacity: 0.8;
     }
     #name{
@@ -170,20 +220,22 @@
     #subject{
         grid-area: subject;
     }
+    input,textarea{
+        border-color: var(--primary-text-color);
+        padding: 10px;
+        border-style: solid ;
+        margin: 0;
+    }
     textarea{
-        background: rgba(125, 125, 125, 0.1);
         grid-area: message;
         resize: none;
-        padding: 10px;
-        margin: 0;
-        border-style: solid ;
     }
     button{
         grid-area: submit;
         width: 220px;
         margin-left: calc(100% - 220px);
-        color: var(--primary-color);
-        background: #FF4D5A;
+        color: #072141;
+        background: var(--secondary-color);
         border: none;
         font-family: var(--secondary-font);
         font-size: 1.2rem;
@@ -197,7 +249,7 @@
     @media screen and (max-width: 650px){
         form{
             grid-template-columns: calc(100%);
-            grid-template-rows: repeat(6, clamp(50px,5vw,85px)) 50px;
+            grid-template-rows: repeat(7, clamp(50px,5vw,85px)) 50px;
             grid-template-areas:
             "name" 
             "email"
@@ -206,6 +258,7 @@
             "message"
             "message"
             "submit"
+            "status"
             "blank";
         }
         h4.my-email{
