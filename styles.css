@@ -540,12 +540,14 @@ section{
     transition: transform 400ms ease-in 500ms;
 }
 .from-right.appear{
-    transform: translateX(-100%);
+    transform: translateX(-99%);
     transition: transform 600ms ease-in-out 75ms;
 }
 .from-right-delayed.appear{
-    transform: translateX(-100%);
+    transform: translateX(-99%);
     transition: transform 300ms ease-in-out 150ms;
+
+
 }
 .from-top-delayed.appear{
     transform: translateY(0);
