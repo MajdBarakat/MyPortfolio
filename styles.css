@@ -1,9 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-@font-face {
-    src: url(./assets/fonts/NoeDisplay-Bold.ttf);
-    font-family: NoeDisplay;
-}
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
 
 * {
     box-sizing:border-box;
@@ -14,8 +11,9 @@
     /*  MAX-VALUES  */
     --max-width: 1440px;
     /*  FONTS  */
-    --primary-font: 'NoeDisplay';
+    --primary-font: 'Playfair Display';
     --secondary-font: 'Poppins';
+    --number-font: 'Abril Fatface';
 }
 
 html.light{
@@ -88,6 +86,8 @@ html.light .linkedin{
 h1{
     font-family: var(--primary-font);
     font-size: 7.5rem;
+    font-weight: 900;
+    letter-spacing: 2px;
     margin: 10px;
     line-height: 1;
     color: var(--primary-text-color);
@@ -97,6 +97,8 @@ h1{
 h2{
     font-family: var(--primary-font);
     font-size: 3.1rem;
+    font-weight: 900;
+    letter-spacing: 1px;
     margin: 0 10px 15px 10px;
     line-height: 1;
     color: var(--secondary-text-color);
@@ -104,8 +106,9 @@ h2{
     text-shadow: 0 10px 10px var(--text-shadow-color)
 }
 h3{
-    font-family: var(--primary-font);
+    font-family: var(--number-font);
     font-size: 7.5rem;
+    font-weight: 100;
     margin: 10px;
     line-height: 1;
     color: var(--primary-text-color);
@@ -318,6 +321,7 @@ section{
 .logo{
     font-family: var(--primary-font);
     font-size: 3em;
+    font-weight: 700;
     color: var(--primary-text-color);
     margin-left:20px;
     transition: text-shadow 0.2s ease-in, opacity 0.2s ease-in ;
