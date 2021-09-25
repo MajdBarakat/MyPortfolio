@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="assets/css/fullpage.css" />
+        <title>Majd Barakat Portfolio</title>
+        <script src="assets/js/jquery.js"></script>
+        <script src="assets/js/fullpage.js"></script>
+        <script src="assets/js/app.js"></script>
+        <script src="assets/js/contact-me.js"></script>
+    </head>
+
+    <body>
+    <div class="menu-box" id="mb1"></div>
+    <div class="menu-box" id="mb2"></div>
+    <div class="menu-box" id="mb3"></div>
+        <ul class="nav-menu">
+            <li id="Home"><a href="index.html">Home</a></li>
+            <li id="Projects"><a href="">Projects</a></li>
+            <li id="About"><a href="">About</a></li>
+            <li id="ContactMe"><a href="contact-me.html">Contact Me</a></li>
+        </ul>
+        <header id="navbar">
+            <div class="navbar-container">
+                <div class="nav-left">
+                    <a href="" class="logo">mb</a>
+                    <div class="light-dark-modes">
+                        <div class="" id="light-btn"></div>
+                        <div class="active" id="dark-btn"></div>
+                    </div>
+                </div>
+                <div class="nav-right">
+                    <li class="social-media">
+                        <a href="" class="twitter"></a>
+                        <a href="" class="github"></a>
+                        <a href="" class="linkedin"></a>
+                    </li>
+                    <a class="burger" id="OFF">
+                        <div class="line1"></div>
+                        <div class="line2"></div>
+                        <div class="line3"></div>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Contact Page -->
+        
+    <div class="about-container">
+        <div class="about-content">
+            <h4>About Me</h4>
+            <p class="about">I’m a <span>Front-End Developer</span> and <span>3rd</span> year student at <span>Brunel University London</span> studying <span>Computer Science</span>.<br><br>Since working in many part time jobs and <span>2</span> freelance jobs I have developed a great work ethic. My next goal is to learn new technologies in order to become a <span>Full-Stack Developer</span>.<br><br>I am looking forward to working with you! <span>:)</span> </p>
+        </div>
+        <h4 class="subtitles">Technologies I Use:</h4>
+        <div class="technologies">
+            <p class="tech-title">Front-End</p>
+            <div class="icons-container">
+                <div class="shopify"></div>
+                <div class="jquery"></div>
+                <div class="js"></div>
+                <div class="css_3"></div>
+                <div class="html_5"></div>
+                <div class="react"></div>
+                <div class="wordpress"></div>
+            </div>
+            <p class="tech-title">Back-End</p>
+            <div class="icons-container">
+                <div class="mongodb"></div>
+                <div class="python"></div>
+                <div class="java"></div>
+                <div class="node_js"></div>
+                <div class="mysql"></div>
+            </div>
+            <p class="tech-title">Design + Others</p>
+            <div class="icons-container">
+                <div class="adobe_xd"></div>
+                <div class="git"></div>
+                <div class="npm"></div>
+                <div class="figma"></div>
+                <div class="adobe_photoshop"></div>
+            </div>
+        </div>
+        <h4 class="subtitles">Hobbies:</h4>
+        <div class="hobbies">
+            <div class="hobby-container">
+                <div class="hobby-icon" id="Coding"></div>
+                <p class="hobby-text"><span>Coding</span> <br> I like to work on personal projects in my free time. It helps me improve my coding skills and learn new things.</p>
+            </div>
+            <div class="hobby-container">
+                <div class="hobby-icon" id="Gaming"></div>
+                <p class="hobby-text"><span>Gaming</span> <br>I enjoy competitive gaming in FPS games such as Overwatch and CS:GO. I also play casual games like Smash and Yakuza</p>
+            </div>
+            <div class="hobby-container">
+                <div class="hobby-icon" id="PowerLifting"></div>
+                <p class="hobby-text"><span>PowerLifting</span> <br> For the last 4 years I have been pushing myself to achieve higher lifts and becoming a healthier person.</p>
+            </div>
+            <div class="hobby-container">
+                <div class="hobby-icon" id="Drawing"></div>
+                <p class="hobby-text"><span>Drawing</span> <br> I have been drawing from before I could remember. It helps me kick back and relax. Check out my <a href="">Instagram Page</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+       
+    </script>
+</body>
+
+<style>
+    :root{
+        font-size: 12.8px;
+    }
+    .about-container{
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        overflow: scroll;
+        flex-direction: column;
+        /* background: red; */
+    }
+    .about-content{
+        width: min(80vw, var(--max-width ));
+        /* background: rgba(125, 125, 125, 0.7); */
+        margin-top: 200px;
+    }
+    p{
+        font-size:  2.25rem;
+        font-weight: 300;
+    }
+    p span{
+        color: var(--secondary-text-color);
+        font-weight: 600;
+
+    }
+    p a{
+        color: var(--primary-text-color);
+        text-decoration: underline;
+        transition: opacity 200ms ease-in;
+        font-weight: 600;
+    }
+    p a:hover{
+        opacity: 0.7;
+    }
+    .subtitles{
+        font-size: 3rem;
+        text-align: center;
+        margin: 30px 0px;
+    }
+    .technologies{
+        padding: 20px;
+        width: 100%;
+        background: var(--primary-color);
+        text-align: center;
+        box-shadow: 0px 23px 53px 11px rgba(0, 0, 0, 0.25), inset -19px 4px 195px 48px rgba(0, 0, 0, 0.25);
+    }
+    .tech-title{
+        font-weight: 700;
+    }
+    .icons-container{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+        flex-wrap: wrap;
+    }
+    .icons-container div{
+        height: 8rem;
+        width: 8rem;
+        margin: 10px 20px 30px 20px;
+    }
+    .icons-container .mysql{
+        width: 144px;
+    }
+    .icons-container div::after{
+        font-family: var(--secondary-font);
+        color: var(--primary-text-color);
+        position: relative;
+        top: 8.5rem;
+        font-weight: 600;
+    }
+    .hobbies{
+        width: 80%;
+        display: flex;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));        margin-bottom: 30px;
+        flex-wrap: wrap;
+        justify-content: center;
+
+    }
+    .hobby-container{
+        width: 400px;
+        background: #072141;
+        box-shadow: 0px 23px 53px 11px rgba(0, 0, 0, 0.25), inset -19px 4px 195px 48px rgba(0, 0, 0, 0.25);
+        padding: 50px 30px;
+        margin: 30px;
+        text-align: center;
+    }
+    .hobby-icon{
+        width: 100%;
+        height: 8rem;
+        margin-bottom: 1rem;
+    }
+    #Coding{
+        background: url("assets/img/coding.svg")no-repeat center center/contain;
+    }
+    #Gaming{
+        background: url("assets/img/gaming.svg")no-repeat center center/contain;
+        height: 6rem;
+        margin: 1.5rem 0;
+    }
+    #PowerLifting{
+        background: url("assets/img/powerlifting.svg")no-repeat center center/contain;
+    }
+    #Drawing{
+        background: url("assets/img/drawing.svg")no-repeat center center/contain;
+    }
+    .shopify{
+        background: url("assets/img/shopify.svg")no-repeat center center/contain;
+    }
+    .shopify::after{
+        content: "Shopify";
+    }
+    .jquery{
+        background: url("assets/img/jquery.svg")no-repeat center center/contain;
+    }
+    .jquery::after{
+        content: "jQuery";
+    }
+    .js{
+        background: url("assets/img/js.svg")no-repeat center center/contain;
+    }
+    .js::after{
+        content: "JavaScript";
+    }
+    .css_3{
+        background: url("assets/img/css_3.svg")no-repeat center center/contain;
+    }
+    .css_3::after{
+        content: "CSS";
+    }
+    .html_5{
+        background: url("assets/img/html_5.svg")no-repeat center center/contain;
+    }
+    .html_5::after{
+        content: "HTML";
+    }
+    .react{
+        background: url("assets/img/react.svg")no-repeat center center/contain;
+    }
+    .react::after{
+        content: "React.js";
+    }
+    .wordpress{
+        background: url("assets/img/wordpress.svg")no-repeat center center/contain;
+    }
+    .wordpress::after{
+        content: "WordPress";
+    }
+    .mongodb{
+        background: url("assets/img/mongodb.svg")no-repeat center center/contain;
+    }
+    .mongodb::after{
+        content: "MongoDB";
+    }
+    .python{
+        background: url("assets/img/python.svg")no-repeat center center/contain;
+    }
+    .python::after{
+        content: "Python";
+    }
+    .java{
+        background: url("assets/img/java.svg")no-repeat center center/contain;
+    }
+    .java::after{
+        content: "Java";
+    }
+    .node_js{
+        background: url("assets/img/node_js.svg")no-repeat center center/contain;
+    }
+    .node_js::after{
+        content: "Node.js";
+    }
+    .mysql{
+        background: url("assets/img/mysql.svg")no-repeat center center/contain;
+    }
+    .mysql::after{
+        content: "MySQL";
+    }
+    .adobe_xd{
+        background: url("assets/img/adobe_xd.svg")no-repeat center center/contain;
+    }
+    .adobe_xd::after{
+        content: "Adobe Xd";
+    }
+    .git{
+        background: url("assets/img/git.svg")no-repeat center center/contain;
+    }
+    .git::after{
+        content: "GIT";
+    }
+    .npm{
+        background: url("assets/img/npm.svg")no-repeat center center/contain;
+    }
+    .npm::after{
+        content: "NPM";
+    }
+    .figma{
+        background: url("assets/img/figma.svg")no-repeat center center/contain;
+    }
+    .figma::after{
+        content: "Figma";
+    }
+    .adobe_photoshop{
+        background: url("assets/img/adobe_photoshop.svg")no-repeat center center/contain;
+    }
+    .adobe_photoshop::after{
+        content: "Photoshop";
+    }
+    
+    @media screen and (max-width: 650px){
+        
+    }
+
+
+</style>
+
+</html>

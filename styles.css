@@ -503,6 +503,137 @@ section{
 .project-bgd #img-3{
     background: url("assets/img/stock-image3.jpg")no-repeat center center/cover;
 }
+/* Contact Page -----------------------------------------*/
+
+html.dark input,
+    html.dark textarea{
+        background: rgba(125, 125, 125, 0.1);
+    }
+    html.light input,
+    html.light textarea{
+        background: rgba(0, 0, 0, 0.1);
+    }
+    html.light button{
+        color: white;
+    }
+    html.dark button{
+        color: #072141;
+    }
+
+    h4{
+        text-shadow: 0 10px 10px var(--text-shadow-color);
+        font-family: var(--secondary-font);
+        font-size: 4rem;
+        font-weight: 700;
+        margin: 0;
+        color: var(--primary-text-color);
+    }
+    .status-container{
+        display: flex;
+        justify-content: center;
+    }
+    #icon{
+        margin-right: 5px;
+    }
+    .error{
+        height: 40px;
+        width: 40px;
+        background: url(assets/img/error.svg)no-repeat center center/contain;
+    }
+    .success{
+        height: 30px;
+        width: 30px;
+        background: url(assets/img/tick.svg)no-repeat center center/contain;
+    }
+    p{
+        margin: 0;
+        margin-top: 2px;
+    }
+    h4 span{
+        color: #FF4D5A;
+    }
+    .my-email{
+        font-size: min(3rem,6.5vw);
+        transition: opacity 200ms ease-in;
+        color: white;
+        text-shadow: 2px 2px 2px black;
+
+
+    }
+    .my-email:hover{
+        opacity: 0.7;
+    }
+    .contact-container{
+        height: 100vh;
+        width: 100vw;
+        align-self: center;
+        justify-self: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+    .contact-content{
+        height: 70%;
+        width: min(80%, var(--max-width ));
+        /* background: rgba(125, 125, 125, 0.7); */
+        position: absolute;
+        top: max(20vh, 100px);
+    }
+    form{
+        margin-top: 1.2rem;
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(2, calc(50% - 10px));
+        grid-template-rows: repeat(3, clamp(60px,5vw,85px)) 50px;
+        row-gap: 20px;
+        column-gap: 20px;
+        grid-template-areas:
+        "name message" 
+        "email message"
+        "subject message"
+        "status submit";
+    }
+    [type = "text"],
+    [type = "email"],
+    p{
+        font-family: var(--secondary-font);
+        font-size: 1.2rem;
+        color: var(--primary-text-color);
+    }
+
+    [type = "text"]:focus,
+    [type = "email"]:focus,
+    button:focus{
+        outline: 1px solid var(--primary-text-color);
+    }
+
+    input::placeholder,
+    textarea::placeholder{
+        font-family: var(--secondary-font);
+        font-size: 1.2rem;
+        opacity: 0.8;
+    }
+    #name{
+        grid-area: name;
+    }
+    #email{
+        grid-area: email;
+    }
+    #subject{
+        grid-area: subject;
+    }
+    input,textarea{
+        border-color: var(--primary-text-color);
+        padding: 10px;
+        border-style: solid ;
+        margin: 0;
+    }
+    textarea{
+        grid-area: message;
+        resize: none;
+        border-width: 2px;    
+    }
 
 /* ANIMATIONS -------------------------------------------*/ 
 .overflow-container{
@@ -561,6 +692,7 @@ section{
     opacity: 0.7;
     transition: opacity 500ms;
 }
+
 
 /* MEDIA QUERIES ----------------------------*/
 
