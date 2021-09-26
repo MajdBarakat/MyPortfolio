@@ -14,6 +14,8 @@ $(document).ready(function(){
             $("#light-btn").removeClass("active")
         }
     });
+
+    
   
     
 });

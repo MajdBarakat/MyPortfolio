@@ -10,8 +10,6 @@ $(document).ready(function(){
     var navMenu = $(".nav-menu");
     var menuBtns = $(".nav-menu li a");
 
-    $(window).resize(function(){location.reload();});
-
     function slideIn(v1,v2,v3){
         v1.transition({x:'0vw'});
         v2.transition({x:'0vw',delay: 200});

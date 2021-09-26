@@ -1,5 +1,6 @@
 $(document).ready(function(){
 
+    $(window).resize(function(){location.reload();});
     
     setInterval(changeActivePage,100);
     
@@ -50,7 +51,7 @@ $(document).ready(function(){
     
     const options = {
         root:null,
-        threshold:0,
+        threshold: 0,
     };
     
     const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll){

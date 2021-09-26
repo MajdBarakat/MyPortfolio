@@ -304,7 +304,7 @@ section{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 30px 40px 0 40px;
+    padding: 20px 40px 10px 40px;
     z-index: 30;
 }
 
@@ -380,18 +380,19 @@ section{
 }
 
 .burger{
-    justify-self:center;
     position: relative;
-    margin: 3px 10px 0 5px;
+    margin: 5px;
     cursor:pointer;
     transition: opacity 0.2s ease-in;
+    display: flex;
+    flex-direction: column;
 }
 
 
 .burger div{
     width:45px;
     height:5px;
-    margin:10px;
+    margin:5px;
     border-radius: 50px;
     background: var(--primary-text-color);
 }
@@ -557,8 +558,6 @@ html.dark input,
         transition: opacity 200ms ease-in;
         color: white;
         text-shadow: 2px 2px 2px black;
-
-
     }
     .my-email:hover{
         opacity: 0.7;
@@ -732,20 +731,25 @@ html.dark input,
     }
     
     .navbar-container{
-        padding: 15px 20px 0 20px;
+        padding: 10px 20px 5px 20px;
+    }
+    .nav-right ul{
+        padding: 0;
     }
     .logo{
         margin: 0;
     }
     
     .burger{
-        margin: 0;
         padding-top: 2px;
+        justify-content: center;
+        padding-top: 8px;
     }
     .burger div{
         width: 30px;
         height: 4px;
-        margin: 5px;
+        margin: 3px;
+
     }
     
     /* .page-selector{
@@ -783,7 +787,7 @@ html.dark input,
     }
     .light-dark-modes{
         margin-left: 10px;
-        align-items:flex-start;
+        align-items:center;
     }
     #dark-btn,
     #light-btn{

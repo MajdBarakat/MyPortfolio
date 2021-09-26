@@ -34,11 +34,13 @@
                     </div>
                 </div>
                 <div class="nav-right">
-                    <li class="social-media">
-                        <a href="" class="twitter"></a>
-                        <a href="" class="github"></a>
-                        <a href="" class="linkedin"></a>
-                    </li>
+                    <ul>
+                        <li class="social-media">
+                            <a href="" class="twitter"></a>
+                            <a href="" class="github"></a>
+                            <a href="" class="linkedin"></a>
+                        </li>
+                    </ul>
                     <a class="burger" id="OFF">
                         <div class="line1"></div>
                         <div class="line2"></div>
@@ -111,6 +113,17 @@
 </body>
 
 <style>
+    .navbar-container{
+        background-color: var(--darker);
+        box-shadow: 0px 23px 53px 11px rgba(0, 0, 0, 0.25);
+    }
+    @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+    .navbar-container {
+        background-color: rgba(0, 0, 0, 0.1);
+        -webkit-backdrop-filter: blur(8px);
+        backdrop-filter: blur(8px);
+    }
+}
     :root{
         font-size: 12.8px;
     }
@@ -148,7 +161,7 @@
     .subtitles{
         font-size: 3rem;
         text-align: center;
-        margin: 30px 0px;
+        margin: 200px 0px 30px 0px;
     }
     .technologies{
         padding: 20px;
