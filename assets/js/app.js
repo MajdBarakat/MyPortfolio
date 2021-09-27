@@ -25,9 +25,9 @@ $(document).ready(function(){
     burger.click(function(){
         if(burger.attr("id") == "OFF"){
             burger.attr("id","ON");
-            line1.transition({rotate:'45', y:"1.3rem"});
+            line1.transition({rotate:'45', y:"1.75rem"});
             line2.transition({x:"-50px",opacity:0});
-            line3.transition({rotate:'-45deg' , y:"-1.3rem"});
+            line3.transition({rotate:'-45deg' , y:"-1.75rem"});
             slideIn(mb1,mb2,mb3);
             navMenu.transition({x:'0vw',delay: 600});
             menuBtns.transition({y:"0px",delay:700});

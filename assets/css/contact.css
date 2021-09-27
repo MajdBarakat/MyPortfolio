@@ -29,8 +29,11 @@ html.dark button{
     width: 30px;
     background: url(assets/img/tick.svg)no-repeat center center/contain;
 }
+.contact-title{
+    font-size: 5rem;
+}
 .my-email{
-    font-size: min(3rem,6.5vw);
+    font-size: min(4rem,6.5vw);
     transition: opacity 200ms ease-in;
     color: white;
     text-shadow: 2px 2px 2px black;
@@ -130,9 +133,6 @@ button:hover{
     transition: opacity 200ms ease-in
 }
 @media screen and (max-width: 650px){
-    :root{
-        font-size: 12px;
-    }
     form{
         grid-template-columns: calc(100%);
         grid-template-rows: repeat(7, clamp(50px,5vw,85px)) 50px;
