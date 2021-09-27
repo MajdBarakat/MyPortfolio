@@ -1,0 +1,207 @@
+.about-container{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /* background: red; */
+}
+.about-content{
+    width: min(80vw, var(--max-width ));
+    /* background: rgba(125, 125, 125, 0.7); */
+    margin-top: 200px;
+}
+p{
+    font-size:  2.25rem;
+    font-weight: 300;
+}
+p span{
+    color: var(--secondary-text-color);
+    font-weight: 600;
+
+}
+p a{
+    color: var(--primary-text-color);
+    text-decoration: underline;
+    transition: opacity 200ms ease-in;
+    font-weight: 600;
+}
+p a:hover{
+    opacity: 0.7;
+}
+.subtitles{
+    font-size: 3rem;
+    text-align: center;
+    margin: 200px 0px 30px 0px;
+}
+.technologies{
+    padding: 20px;
+    width: 100%;
+    background: var(--primary-color);
+    text-align: center;
+    box-shadow: 0px 23px 53px 11px rgba(0, 0, 0, 0.25), inset -19px 4px 195px 48px rgba(0, 0, 0, 0.25);
+}
+.tech-title{
+    font-weight: 700;
+}
+.icons-container{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+.icons-container div{
+    height: 8rem;
+    width: 8rem;
+    margin: 10px 20px 30px 20px;
+}
+.icons-container .mysql{
+    width: 144px;
+}
+.icons-container div::after{
+    font-family: var(--secondary-font);
+    color: var(--primary-text-color);
+    position: relative;
+    top: 8.5rem;
+    font-weight: 600;
+}
+.hobbies{
+    width: 80%;
+    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));        margin-bottom: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+.hobby-container{
+    width: 400px;
+    background: #072141;
+    box-shadow: 0px 23px 53px 11px rgba(0, 0, 0, 0.25), inset -19px 4px 195px 48px rgba(0, 0, 0, 0.25);
+    padding: 50px 30px;
+    margin: 30px;
+    text-align: center;
+}
+.hobby-icon{
+    width: 100%;
+    height: 8rem;
+    margin-bottom: 1rem;
+}
+#Coding{
+    background: url("../img/coding.svg")no-repeat center center/contain;
+}
+#Gaming{
+    background: url("../img/gaming.svg")no-repeat center center/contain;
+    height: 6rem;
+    margin: 1.5rem 0;
+}
+#PowerLifting{
+    background: url("../img/powerlifting.svg")no-repeat center center/contain;
+}
+#Drawing{
+    background: url("../img/drawing.svg")no-repeat center center/contain;
+}
+.shopify{
+    background: url("../img/shopify.svg")no-repeat center center/contain;
+}
+.shopify::after{
+    content: "Shopify";
+}
+.jquery{
+    background: url("../img/jquery.svg")no-repeat center center/contain;
+}
+.jquery::after{
+    content: "jQuery";
+}
+.js{
+    background: url("../img/js.svg")no-repeat center center/contain;
+}
+.js::after{
+    content: "JavaScript";
+}
+.css_3{
+    background: url("../img/css_3.svg")no-repeat center center/contain;
+}
+.css_3::after{
+    content: "CSS";
+}
+.html_5{
+    background: url("../img/html_5.svg")no-repeat center center/contain;
+}
+.html_5::after{
+    content: "HTML";
+}
+.react{
+    background: url("../img/react.svg")no-repeat center center/contain;
+}
+.react::after{
+    content: "React.js";
+}
+.wordpress{
+    background: url("../img/wordpress.svg")no-repeat center center/contain;
+}
+.wordpress::after{
+    content: "WordPress";
+}
+.mongodb{
+    background: url("../img/mongodb.svg")no-repeat center center/contain;
+}
+.mongodb::after{
+    content: "MongoDB";
+}
+.python{
+    background: url("../img/python.svg")no-repeat center center/contain;
+}
+.python::after{
+    content: "Python";
+}
+.java{
+    background: url("../img/java.svg")no-repeat center center/contain;
+}
+.java::after{
+    content: "Java";
+}
+.node_js{
+    background: url("../img/node_js.svg")no-repeat center center/contain;
+}
+.node_js::after{
+    content: "Node.js";
+}
+.mysql{
+    background: url("../img/mysql.svg")no-repeat center center/contain;
+}
+.mysql::after{
+    content: "MySQL";
+}
+.adobe_xd{
+    background: url("../img/adobe_xd.svg")no-repeat center center/contain;
+}
+.adobe_xd::after{
+    content: "Adobe Xd";
+}
+.git{
+    background: url("../img/git.svg")no-repeat center center/contain;
+}
+.git::after{
+    content: "GIT";
+}
+.npm{
+    background: url("../img/npm.svg")no-repeat center center/contain;
+}
+.npm::after{
+    content: "NPM";
+}
+.figma{
+    background: url("../img/figma.svg")no-repeat center center/contain;
+}
+.figma::after{
+    content: "Figma";
+}
+.adobe_photoshop{
+    background: url("../img/adobe_photoshop.svg")no-repeat center center/contain;
+}
+.adobe_photoshop::after{
+    content: "Photoshop";
+}
+
+@media screen and (max-width: 650px){
+    
+}
