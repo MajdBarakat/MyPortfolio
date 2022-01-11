@@ -467,36 +467,37 @@ section{
     flex-direction: row-reverse;
     align-items: center;
     z-index: 1;
-    background-color: red;
 }
 
-
-
-/* .project-container .overflow-container{
+.project-number{
     position:absolute;
-    top:10%;
+    top:20%;
     left:-80px;
     z-index: 20;
     overflow: hidden;
-} */
+}
 
 .desktop-view{
-    height: 50%;
+    height: 700px;
     width: 100%;
-    position: absolute;
     background-color: blue;
+    margin: auto;
 }
 
 .phone-view{
-    width: 40%;
-    height: 100px;
-    right: 80%;
+    width: 45%;
+    height: 600px;
+    right: 70%;
+    top:27%;
     background-color: #010307;
     position: absolute;
 }
 
-.project-bgd #img-1{
+.project-container #img-1{
     background: url("assets/img/Yawboard-Desktop.svg")no-repeat center center/contain;
+}
+.project-container #img-1-2{
+    background: url("assets/img/Yawboard-Phone.svg")no-repeat center center/contain;
 }
 .project-bgd #img-2{
     background: url("assets/img/stock-image4.jpg")no-repeat center center/cover;
