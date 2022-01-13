@@ -504,6 +504,18 @@ section{
 .project-container #img-2-2{
     background: url("assets/img/Zero-Hunger-Phone.svg")no-repeat center center/contain;
 }
+.project-container #img-3{
+    background: url("assets/img/My-Portfolio-Desktop.svg")no-repeat center center/contain;
+}
+.project-container #img-3-2{
+    background: url("assets/img/My-Portfolio-Phone.svg")no-repeat center center/contain;
+}
+.project-container #img-4{
+    background: url("assets/img/Work-In-Progress-Desktop.svg")no-repeat center center/contain;
+}
+.project-container #img-4-2{
+    background: url("assets/img/Work-In-Progress-Phone.svg")no-repeat center center/contain;
+}
 /* ANIMATIONS -------------------------------------------*/ 
 .overflow-container{
     overflow: hidden;
