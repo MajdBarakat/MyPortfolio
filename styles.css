@@ -137,16 +137,17 @@ p{
 .btn-container{
     display: flex;
     margin: 10px 10px;
-    gap:30px;
+    gap:20px;
 }
 
 a.btn1{
-    color: var(--light-color);
+    color: var(--primary-color);
     background: var(--secondary-text-color);
     font-family: var(--secondary-font);
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: 600;
     padding: 20px 60px;
+    line-height: 1.9;
 }
 
 a.btn2{
@@ -154,7 +155,7 @@ a.btn2{
     border-style: solid;
     border-color: var(--secondary-text-color);
     font-family: var(--secondary-font);
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: 600;
     padding: 20px 60px;
 }
@@ -480,7 +481,6 @@ section{
 .desktop-view{
     height: 700px;
     width: 100%;
-    background-color: blue;
     margin: auto;
 }
 
@@ -489,7 +489,6 @@ section{
     height: 600px;
     right: 70%;
     top:27%;
-    background-color: #010307;
     position: absolute;
 }
 
@@ -499,11 +498,11 @@ section{
 .project-container #img-1-2{
     background: url("assets/img/Yawboard-Phone.svg")no-repeat center center/contain;
 }
-.project-bgd #img-2{
-    background: url("assets/img/stock-image4.jpg")no-repeat center center/cover;
+.project-container #img-2{
+    background: url("assets/img/Zero-Hunger-Desktop.svg")no-repeat center center/contain;
 }
-.project-bgd #img-3{
-    background: url("assets/img/stock-image3.jpg")no-repeat center center/cover;
+.project-container #img-2-2{
+    background: url("assets/img/Zero-Hunger-Phone.svg")no-repeat center center/contain;
 }
 /* ANIMATIONS -------------------------------------------*/ 
 .overflow-container{
@@ -567,12 +566,13 @@ section{
 /* MEDIA QUERIES ----------------------------*/
 
 /* Phones -------*/
-@media screen and (max-width: 1000px){
-    #landing-page a.btn1,
-    #landing-page a.btn2{
-        font-size: 0.8rem;
+@media screen and (max-width: 1500px){
+    a.btn1,
+    a.btn2{
+        font-size: 2rem;
         white-space: nowrap;
-        padding: 12px 40px;
+        padding: 10px 20px;
+        margin-right: 10px;
     }
     .btn-container{
         gap:0px;
@@ -581,26 +581,103 @@ section{
     .title-container{
         position: relative;
         top:20px;
-        height: 45vh;
+        min-height: 40vh;
         justify-content: center;
     }
     :root{
         font-size: 8px;
     }
     h1{
-        font-size: clamp(5.4rem,18vw,10.9rem);
+        font-size: clamp(5.2rem,13vw,9.5rem);
     }
     h2{
-        font-size: clamp(2.5rem,8vw,4.5rem);
+        font-size: clamp(2.5rem,7vw,4.5rem);
         margin-bottom: 10px;
     }
-    
-    a.btn1,
-    a.btn2{
-        padding: 15px 45px;
-        margin-right: 10px;
+    .logo{
+        font-size: 6rem;
+        margin: 0;
+    }
+    .burger div{
+        font-size: 12px;
     }
     
+    .project-container{
+        position: relative;
+        width: 100vw;
+        left: 0%;
+        height: 60vh;
+    }
+    .project-number{
+        display: none;
+    }
+    
+    .desktop-view{
+        height: 100%;
+        width: 100%;
+        background-color: blue;
+        margin: auto;
+    }
+    
+    .phone-view{
+        width: 45%;
+        height: 100%;
+        left: 0%;
+        top:7%;
+        background-color: #010307;
+        position: absolute;
+    }
+    section{
+        display: flex;
+        flex-direction: column;
+        gap: 10vh;
+    }
+    
+    
+    /* .page-selector{
+        top: 30vh;
+    } */
+    
+    .page-selector a{
+        width: 4px;
+        margin: 10px 0;
+    }
+    .from-top-delayed{
+        transform: translateY(-105%);
+    }
+    
+}
+@media (max-height: 1079px) and (max-width: 1500px){
+    h1{
+        font-size: clamp(2.4rem,8vh,9.9rem);
+    }
+    h2{
+        font-size: clamp(2.5rem,6vh,3.5rem);
+    }
+    .project-container{
+        height: 50vh;
+    }
+    .phone-view{
+        left: 10%;
+    }
+}
+
+@media screen and (max-width: 600px){
+    h1{
+        font-size: clamp(5.2rem,13vw,9.5rem);
+    }
+    h2{
+        font-size: clamp(2.5rem,7vw,4.5rem);
+    }
+    .burger div{
+        font-size: 8px;
+    }
+    .title-container{
+        justify-content: end;
+    }
+    #landing-page .title-container{
+        justify-content: center;
+    }
     .navbar-container{
         padding: 10px 20px 5px 20px;
     }
@@ -608,7 +685,7 @@ section{
         padding: 0;
     }
     .logo{
-        margin: 0;
+        font-size: 3.5rem;
     }
     
     .burger{
@@ -620,40 +697,6 @@ section{
         height: 4px;
         margin: 3px;
 
-    }
-    
-    /* .page-selector{
-        top: 30vh;
-    } */
-    
-    .page-selector a{
-        width: 4px;
-        margin: 10px 0;
-    }
-    
-    .project-container{
-        position: relative;
-        width: 100vw;
-        left: 0%;
-        height: 45vh;
-    }
-    .p-c{
-        width:85%;
-        height:90%;
-        top:10%;
-        left: 7.5%;
-    }
-    .p-c .overflow-container{
-        left:60%;
-        top:-60px;
-    }
-    section{
-        display: flex;
-        flex-direction: column;
-        gap: 10vh;
-    }
-    .from-top-delayed{
-        transform: translateY(-105%);
     }
     .light-dark-modes{
         margin-left: 10px;
