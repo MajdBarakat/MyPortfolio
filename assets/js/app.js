@@ -24,6 +24,7 @@ $(document).ready(function(){
     
     burger.click(function(){
         if(burger.attr("id") == "OFF"){
+            $(".navbar-container").removeClass("active");
             burger.attr("id","ON");
             line1.transition({rotate:'45', y:"1.75em"});
             line2.transition({x:"-50px",opacity:0});

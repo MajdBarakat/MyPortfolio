@@ -25,6 +25,7 @@ html.light{
     --light-color:white;
     --dark:#f4a39c;
     --darker: #f9cbc7;
+    --darker-transparent: #f9cbc760;
     --darkest: #fdf2f1;
     /*  TEXT-COLORS  */
     --primary-text-color:black;
@@ -39,6 +40,7 @@ html.dark{
     --light-color:white;  
     --dark:#05172E;
     --darker: #030D1A;
+    --darker-transparent: #030d1a60;
     --darkest: #010307;
     /*  TEXT-COLORS  */
     --primary-text-color:white;
@@ -608,8 +610,10 @@ section{
         font-size: clamp(2.5rem,7vw,4.5rem);
         margin-bottom: 10px;
     }
+    .nav-left{
+        font-size: 12px;
+    }
     .logo{
-        font-size: 6rem;
         margin: 0;
     }
     .burger div{
@@ -699,10 +703,9 @@ section{
     .nav-right ul{
         padding: 0;
     }
-    .logo{
-        font-size: 3.5rem;
+    .nav-left{
+        font-size: 7px;
     }
-    
     .burger{
         justify-content: center;
         margin-left: 10px;

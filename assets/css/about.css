@@ -67,14 +67,14 @@ p a:hover{
 .hobbies{
     width: 80%;
     display: flex;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));        margin-bottom: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));        
+    margin-bottom: 30px;
     flex-wrap: wrap;
     justify-content: center;
-
 }
 .hobby-container{
     width: 400px;
-    background: #072141;
+    background: var(--primary-color);
     box-shadow: 0px 23px 53px 11px rgba(0, 0, 0, 0.25), inset -19px 4px 195px 48px rgba(0, 0, 0, 0.25);
     padding: 50px 30px;
     margin: 30px;
@@ -200,8 +200,4 @@ p a:hover{
 }
 .adobe_photoshop::after{
     content: "Photoshop";
-}
-
-@media screen and (max-width: 650px){
-    
 }
