@@ -457,6 +457,7 @@ section{
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    background: red;
 }
 
 .project-container{
