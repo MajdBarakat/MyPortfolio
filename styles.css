@@ -457,6 +457,7 @@ section{
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    background: red;
 }
 
 .project-container{
@@ -468,6 +469,7 @@ section{
     flex-direction: row-reverse;
     align-items: center;
     z-index: 1;
+    background: blue;
 }
 
 .project-number{
