@@ -595,6 +595,7 @@ section{
         top:20px;
         min-height: 40vh;
         justify-content: center;
+        -webkit-justify-content:center;
     }
     :root{
         font-size: 8px;
@@ -686,6 +687,7 @@ section{
     }
     .title-container{
         justify-content: end;
+        -webkit-justify-content:end;
     }
     #landing-page .title-container{
         justify-content: center;
