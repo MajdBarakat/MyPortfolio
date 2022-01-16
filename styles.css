@@ -457,8 +457,6 @@ section{
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    background: red;
-    justify-content: end;
 }
 
 .project-container{
@@ -470,7 +468,6 @@ section{
     flex-direction: row-reverse;
     align-items: center;
     z-index: 1;
-    background: blue;
 }
 
 .project-number{
@@ -597,7 +594,7 @@ section{
         position: relative;
         top:20px;
         min-height: 40vh;
-        justify-content: end;
+        justify-content: center;
     }
     :root{
         font-size: 8px;
