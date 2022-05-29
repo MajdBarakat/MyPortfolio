@@ -10,4 +10,4 @@ With the addition of some libraries to improve UI/UX specifically, Three.js and 
 
 **CONTACT**
 
-- Please use the contact form in the website or contact me directly @ majdbarakat.dev@gmail.com for any inquiries or reporting a bug.
+Please use the contact form in the website or contact me directly @ majdbarakat.dev@gmail.com for any inquiries or reporting a bug.
