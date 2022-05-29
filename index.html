@@ -1,187 +1,213 @@
 <!DOCTYPE html>
 <html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="assets/img/night-sphere.svg" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="assets/css/fullpage.css" />
+    <title>Majd Barakat Portfolio</title>
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/fullpage.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/index.js"></script>
+  </head>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" href="assets/img/night-sphere.svg">
-        <link rel="stylesheet" href="styles.css">
-        <link rel="stylesheet" href="assets/css/fullpage.css" />
-        <title>Majd Barakat Portfolio</title>
-        <script src="assets/js/jquery.js"></script>
-        <script src="assets/js/fullpage.js"></script>
-        <script src="assets/js/app.js"></script>
-        <script src="assets/js/index.js"></script>
-    </head>
-
-    <body>
+  <body>
     <div class="menu-box" id="mb1"></div>
     <div class="menu-box" id="mb2"></div>
     <div class="menu-box" id="mb3"></div>
-        <ul class="nav-menu">
-            <li id="Home"><a href="index.html">Home</a></li>
-            <!-- <li id="Projects"><a href="projects.html">Projects</a></li> -->
-            <li id="About"><a href="about.html">About</a></li>
-            <li id="ContactMe"><a href="contact.html">Contact Me</a></li>
-        </ul>
-        <header id="navbar">
-            <div class="navbar-container">
-                <div class="nav-left">
-                    <a href="index.html" class="logo">mb</a>
-                    <div class="light-dark-modes">
-                        <div class="" id="light-btn"></div>
-                        <div class="active" id="dark-btn"></div>
-                    </div>
-                </div>
-                <div class="nav-right">
-                    <li class="social-media">
-                        <a target="_blank" href="https://twitter.com/majdbarakat_dev" class="twitter"></a>
-                        <a target="_blank" href="https://github.com/MajdBarakat" class="github"></a>
-                        <a target="_blank" href="https://www.linkedin.com/in/majd-barakat-a01119231/" class="linkedin"></a>
-                    </li>
-                    <a class="burger" id="OFF">
-                        <div class="line1"></div>
-                        <div class="line2"></div>
-                        <div class="line3"></div>
-                    </a>
-                </div>
-            </div>
-        </header>
-        
-        <footer>
-            <div class="footer-container">
-                <div class="scroll-container">
-                    <div class="scroll"></div>
-                    <p>Scroll to <br> next page</p>
-                </div>
-            </div>
-        </footer>
-
-        <div class="page-selector">
-            <a href="#page-01" class="active" id='p1'></a>
-            <a href="#page-02" class="" id='p2'></a>
-            <a href="#page-03" class="" id='p3'></a>
-            <a href="#page-04" class="" id='p4'></a>
-            <a href="#page-05" class="" id='p5'></a>
+    <ul class="nav-menu">
+      <li id="Home"><a href="index.html">Home</a></li>
+      <!-- <li id="Projects"><a href="projects.html">Projects</a></li> -->
+      <li id="About"><a href="about.html">About</a></li>
+      <li id="ContactMe"><a href="contact.html">Contact Me</a></li>
+    </ul>
+    <header id="navbar">
+      <div class="navbar-container">
+        <div class="nav-left">
+          <a href="index.html" class="logo">mb</a>
+          <div class="light-dark-modes">
+            <div class="" id="light-btn"></div>
+            <div class="active" id="dark-btn"></div>
+          </div>
         </div>
-        
-        <!--- Landing Page #01 -->
-        
-    <div class="container">
-        
-        <section id="landing-page" class="section">
-            <div class="title-container">
-                <h1 class="from-left">MAJD <br> BARAKAT</h1>
-                <div class="overflow-container">
-                    <h2 class="from-top">Junior Full Stack Developer</h2>
-                </div>
-                <div class="overflow-container">
-                    <div class="btn-container from-top-delayed">
-                        <a href="#page-02" class="btn1">My Projects</a>
-                        <a href="contact.html" class="btn2">Contact Me</a>
-                    </div>
-                </div>
-            </div>
-            <div class="sphere-container">
-                <div class="sphere"></div>
-            </div>
-        </section>
-        
-        <!---  Page #02 -->
-        
-        <section id="" class="section">
-            <div  class="title-container">
-                <h1 class="from-left">YAWBOARD</h1>
-                <div class="overflow-container">
-                    <h2 class="from-top" >E-Commerce Website</h2>
-                </div>
-                <div class="overflow-container">
-                    <div class="btn-container from-top-delayed">
-                        <a href="https://yawboard.com" target="_blank" class="btn1">Live Site</a>
-                        <!-- <a href="" target="_blank" class="btn2">View Project</a>  -->
-                    </div>
-                </div>
-            </div>
-            <div class="project-container">
-                    <div class="overflow-container project-number">
-                        <h3 class="from-bottom">01</h3>
-                    </div>
-                    <div class="desktop-view" id="img-1"></div>
-                    <div class="phone-view" id="img-1-2"></div>
-            </div>
-        </section>
-        
-        <!---  Page #03 -->
-        
-        <section id="" class="section">
-            <div class="title-container">
-                <h1 class="from-left" > ZERO <br> HUNGER</h1>
-                <div class="overflow-container">
-                    <h2 class="from-top">Android Application</h2>
-                </div>
-                <div class="overflow-container">
-                    <div class="btn-container from-top-delayed">
-                        <!-- <a href="" class="btn2">View Project</a> -->
-                    </div>
-                </div>
-            </div>
-            <div class="project-container">
-                <div class="overflow-container project-number">
-                    <h3 class="from-bottom">02</h3>
-                </div>
-                <div class="desktop-view" id="img-2"></div>
-                <div class="phone-view" id="img-2-2"></div>
+        <div class="nav-right">
+          <li class="social-media">
+            <a
+              target="_blank"
+              href="https://twitter.com/majdbarakat_dev"
+              class="twitter"
+            ></a>
+            <a
+              target="_blank"
+              href="https://github.com/MajdBarakat"
+              class="github"
+            ></a>
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/majd-barakat-a01119231/"
+              class="linkedin"
+            ></a>
+          </li>
+          <a class="burger" id="OFF">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </a>
         </div>
-        </section>
-        
-        <!---  Page #04 -->
-        
-        <section id="" class="section">
-            <div class="title-container">
-                <h1 class="from-left" >MY <br> PORTFOLIO </h1>
-                <div class="overflow-container">
-                    <h2 class="from-top">Vanilla Static Website</h2>
-                </div>
-                <div class="overflow-container">
-                    <div class="btn-container from-top-delayed">
-                        <a href="https://github.com/MajdBarakat/MyPortfolio" class="btn2">View Project</a>
-                    </div>
-                </div>
-            </div>
-            <div class="project-container">
-                <div class="overflow-container project-number">
-                    <h3 class="from-bottom">03</h3>
-                </div>
-                <div class="desktop-view" id="img-3"></div>
-                <div class="phone-view" id="img-3-2"></div>
-            </div>
-        </section>
-        
-        <!---  Page #05 -->
-        
-        <section id="" class="section">
-            <div class="title-container">
-                <h1 class="from-left">OTHER <br> PROJECTS </h1>
-                <div class="overflow-container">
-                    <h2 class="from-top"> Work in Progress & Personal </h2>
-                </div>
-                <div class="overflow-container">
-                    <div class="btn-container from-top-delayed">
-                        <!-- <a href="" class="btn2">View All Projects</a> -->
-                    </div>
-                </div>
-            </div>
-            <div class="project-container">
-                <div class="overflow-container project-number">
-                    <h3 class="from-bottom">04</h3>
-                </div>
-                <div class="desktop-view" id="img-4"></div>
-                <div class="phone-view" id="img-4-2"></div>
-            </div>
-        </section>
+      </div>
+    </header>
 
+    <footer>
+      <div class="footer-container">
+        <div class="scroll-container">
+          <div class="scroll"></div>
+          <p>
+            Scroll to <br />
+            next page
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <div class="page-selector">
+      <a href="#page-01" class="active" id="p1"></a>
+      <a href="#page-02" class="" id="p2"></a>
+      <a href="#page-03" class="" id="p3"></a>
+      <a href="#page-04" class="" id="p4"></a>
+      <a href="#page-05" class="" id="p5"></a>
     </div>
 
-</body>
+    <!--- Landing Page #01 -->
+
+    <div class="container">
+      <section id="landing-page" class="section">
+        <div class="title-container">
+          <h1 class="from-left">
+            MAJD <br />
+            BARAKAT
+          </h1>
+          <div class="overflow-container">
+            <h2 class="from-top">Junior Full Stack Developer</h2>
+          </div>
+          <div class="overflow-container">
+            <div class="btn-container from-top-delayed">
+              <a href="#page-02" class="btn1">My Projects</a>
+              <a href="contact.html" class="btn2">Contact Me</a>
+            </div>
+          </div>
+        </div>
+        <div class="sphere-container">
+          <div class="sphere"></div>
+        </div>
+      </section>
+
+      <!---  Page #02 -->
+
+      <section id="" class="section">
+        <div class="title-container">
+          <h1 class="from-left">YAWBOARD</h1>
+          <div class="overflow-container">
+            <h2 class="from-top">E-Commerce Website</h2>
+          </div>
+          <div class="overflow-container">
+            <div class="btn-container from-top-delayed">
+              <a href="https://yawboard.com" target="_blank" class="btn1"
+                >Live Site</a
+              >
+              <!-- <a href="" target="_blank" class="btn2">View Project</a>  -->
+            </div>
+          </div>
+        </div>
+        <div class="project-container">
+          <div class="overflow-container project-number">
+            <h3 class="from-bottom">01</h3>
+          </div>
+          <div class="desktop-view" id="img-1"></div>
+          <div class="phone-view" id="img-1-2"></div>
+        </div>
+      </section>
+
+      <!---  Page #03 -->
+
+      <section id="" class="section">
+        <div class="title-container">
+          <h1 class="from-left">Algorthm <br /></h1>
+          <div class="overflow-container">
+            <h2 class="from-top">Educational Algorithms </br> Visualizer</h2>
+          </div>
+          <div class="overflow-container">
+            <div class="btn-container from-top-delayed">
+              <a href="https://algorthm.co.uk" target="_blank" class="btn1"
+                >Live Site</a
+              >
+              <a href="https://github.com/MajdBarakat/Algorthm" class="btn2">View Repo</a>
+            </div>
+          </div>
+        </div>
+        <div class="project-container">
+          <div class="overflow-container project-number">
+            <h3 class="from-bottom">02</h3>
+          </div>
+          <div class="desktop-view" id="img-2"></div>
+        </div>
+      </section>
+
+      <!---  Page #04 -->
+
+      <section id="" class="section">
+        <div class="title-container">
+          <h1 class="from-left">
+            MY <br />
+            PORTFOLIO
+          </h1>
+          <div class="overflow-container">
+            <h2 class="from-top">Vanilla JS Static Website</h2>
+          </div>
+          <div class="overflow-container">
+            <div class="btn-container from-top-delayed">
+              <a href="https://github.com/MajdBarakat/MyPortfolio" class="btn2"
+                >View Repo</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="project-container">
+          <div class="overflow-container project-number">
+            <h3 class="from-bottom">03</h3>
+          </div>
+          <div class="desktop-view" id="img-3"></div>
+          <div class="phone-view" id="img-3-2"></div>
+        </div>
+      </section>
+
+      <!---  Page #05 -->
+
+      <section id="" class="section">
+        <div class="title-container">
+          <h1 class="from-left">
+            OTHER <br />
+            PROJECTS
+          </h1>
+          <div class="overflow-container">
+            <h2 class="from-top">Work in Progress & Personal</h2>
+          </div>
+          <div class="overflow-container">
+            <div class="btn-container from-top-delayed">
+              <!-- <a href="" class="btn2">View All Projects</a> -->
+            </div>
+          </div>
+        </div>
+        <div class="project-container">
+          <div class="overflow-container project-number">
+            <h3 class="from-bottom">04</h3>
+          </div>
+          <div class="desktop-view" id="img-4"></div>
+          <div class="phone-view" id="img-4-2"></div>
+        </div>
+      </section>
+    </div>
+  </body>
 </html>

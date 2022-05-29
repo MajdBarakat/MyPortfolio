@@ -1,105 +1,108 @@
 <!DOCTYPE html>
 <html lang="en" class="dark">
-    
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" href="assets/img/night-sphere.svg">
-        <link rel="stylesheet" href="styles.css">
-        <link rel="stylesheet" href="assets/css/other.css">
-        <link rel="stylesheet" href="assets/css/projects.css"/>
-        <title>Majd Barakat Portfolio</title>
-        <script src="assets/js/jquery.js"></script>
-        <script src="assets/js/app.js"></script>
-        <script src="assets/js/other.js"></script>
-        
-    </head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="assets/img/night-sphere.svg" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="assets/css/other.css" />
+    <link rel="stylesheet" href="assets/css/projects.css" />
+    <title>Majd Barakat Portfolio</title>
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/other.js"></script>
+  </head>
 
-    <body>
+  <body>
     <div class="menu-box" id="mb1"></div>
     <div class="menu-box" id="mb2"></div>
     <div class="menu-box" id="mb3"></div>
-        <ul class="nav-menu">
-            <li id="Home"><a href="index.html">Home</a></li>
-            <li id="Projects"><a href="projects.html">Projects</a></li>
-            <li id="About"><a href="about.html">About</a></li>
-            <li id="ContactMe"><a href="contact.html">Contact Me</a></li>
-        </ul>
-        <header id="navbar">
-            <div class="navbar-container">
-                <div class="nav-left">
-                    <a href="" class="logo">mb</a>
-                    <div class="light-dark-modes">
-                        <div class="" id="light-btn"></div>
-                        <div class="active" id="dark-btn"></div>
-                    </div>
-                </div>
-                <div class="nav-right">
-                    <ul>
-                        <li class="social-media">
-                            <a target="_blank" href="https://twitter.com/VaxionDev" class="twitter"></a>
-                            <a target="_blank" href="https://github.com/MajdBarakat" class="github"></a>
-                            <a target="_blank" href="" class="linkedin"></a>
-                        </li>
-                    </ul>
-                    <a class="burger" id="OFF">
-                        <div class="line1"></div>
-                        <div class="line2"></div>
-                        <div class="line3"></div>
-                    </a>
-                </div>
-            </div>
-        </header>
-
-        <!-- Projects Page -->
-        
-    <div class="projects-container">
-        <div class="projects-content">
-            <h4>Projects</h4>
-            <div class="projects-grid">
-
-                <div class="thumbnail-project-container">
-
-                    <div class="thumbnail-top">
-                        <div class="thumbnail-project-title-container">
-                            <p class="thumbnail-project-title">Yawboard</p>
-                            <p class="thumbnail-project-description">E-Commerce Website</p>
-                        </div>
-                        <p class="thumbnail-project-number">01</p>
-                    </div>
-
-                    <div class="thumbnail-project-image" id="img1"></div>
-
-                    <p class="thumbnail-project-technologies">Wordpress, Stripe, JS, PHP, CSS, HTML</p>
-
-                </div>
-
-
-            </div>
+    <ul class="nav-menu">
+      <li id="Home"><a href="index.html">Home</a></li>
+      <li id="Projects"><a href="projects.html">Projects</a></li>
+      <li id="About"><a href="about.html">About</a></li>
+      <li id="ContactMe"><a href="contact.html">Contact Me</a></li>
+    </ul>
+    <header id="navbar">
+      <div class="navbar-container">
+        <div class="nav-left">
+          <a href="" class="logo">mb</a>
+          <div class="light-dark-modes">
+            <div class="" id="light-btn"></div>
+            <div class="active" id="dark-btn"></div>
+          </div>
         </div>
-    </div>
+        <div class="nav-right">
+          <ul>
+            <li class="social-media">
+              <a
+                target="_blank"
+                href="https://twitter.com/VaxionDev"
+                class="twitter"
+              ></a>
+              <a
+                target="_blank"
+                href="https://github.com/MajdBarakat"
+                class="github"
+              ></a>
+              <a target="_blank" href="" class="linkedin"></a>
+            </li>
+          </ul>
+          <a class="burger" id="OFF">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </a>
+        </div>
+      </div>
+    </header>
 
-</body>
+    <!-- Projects Page -->
+
+    <div class="projects-container">
+      <div class="projects-content">
+        <h4>Projects</h4>
+        <div class="projects-grid">
+          <div class="thumbnail-project-container">
+            <div class="thumbnail-top">
+              <div class="thumbnail-project-title-container">
+                <p class="thumbnail-project-title">Yawboard</p>
+                <p class="thumbnail-project-description">E-Commerce Website</p>
+              </div>
+              <p class="thumbnail-project-number">01</p>
+            </div>
+
+            <div class="thumbnail-project-image" id="img1"></div>
+
+            <p class="thumbnail-project-technologies">
+              Wordpress, Stripe, JS, PHP, CSS, HTML
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
 
 <style>
-    .projects-grid{
-        width: 80%;
-        display: flex;
-        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));        
-        margin-bottom: 30px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .thumbnail-top{
-        display: flex;
-    }
-    .thumbnail-project-image{
-        height: 515px;
-        width: 916px;
-    }
-    #img1{
-        background: url("assets/img/Yawboard-Thumbnail.svg")no-repeat center center/contain;
-    }
+  .projects-grid {
+    width: 80%;
+    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .thumbnail-top {
+    display: flex;
+  }
+  .thumbnail-project-image {
+    height: 515px;
+    width: 916px;
+  }
+  #img1 {
+    background: url("assets/img/Yawboard-Thumbnail.svg") no-repeat center
+      center/contain;
+  }
 </style>

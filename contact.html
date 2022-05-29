@@ -1,103 +1,150 @@
 <!DOCTYPE html>
 <html lang="en" class="dark">
-    
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" href="assets/img/night-sphere.svg">
-        <link rel="stylesheet" href="styles.css">
-        <link rel="stylesheet" href="assets/css/other.css">
-        <link rel="stylesheet" href="assets/css/contact.css" />
-        <title>Majd Barakat Portfolio</title>
-        <script src="assets/js/jquery.js"></script>
-        <script src="assets/js/app.js"></script>
-        <script src="assets/js/other.js"></script>
-    </head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="assets/img/night-sphere.svg" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="assets/css/other.css" />
+    <link rel="stylesheet" href="assets/css/contact.css" />
+    <title>Majd Barakat Portfolio</title>
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/other.js"></script>
+  </head>
 
-    <body>
+  <body>
     <div class="menu-box" id="mb1"></div>
     <div class="menu-box" id="mb2"></div>
     <div class="menu-box" id="mb3"></div>
-        <ul class="nav-menu">
-            <li id="Home"><a href="index.html">Home</a></li>
-            <!-- <li id="Projects"><a href="projects.html">Projects</a></li> -->
-            <li id="About"><a href="about.html">About</a></li>
-            <li id="ContactMe"><a href="contact.html">Contact Me</a></li>
-        </ul>
-        <header id="navbar">
-            <div class="navbar-container">
-                <div class="nav-left">
-                    <a href="index.html" class="logo">mb</a>
-                    <div class="light-dark-modes">
-                        <div class="" id="light-btn"></div>
-                        <div class="active" id="dark-btn"></div>
-                    </div>
-                </div>
-                <div class="nav-right">
-                    <li class="social-media">
-                        <a target="_blank" href="https://twitter.com/majdbarakat_dev" class="twitter"></a>
-                        <a target="_blank" href="https://github.com/MajdBarakat" class="github"></a>
-                        <a target="_blank" href="https://www.linkedin.com/in/majd-barakat-a01119231/" class="linkedin"></a>
-                    </li>
-                    <a class="burger" id="OFF">
-                        <div class="line1"></div>
-                        <div class="line2"></div>
-                        <div class="line3"></div>
-                    </a>
-                </div>
-            </div>
-        </header>
-
-        <!-- Contact Page -->
-        
-    <div class="contact-container">
-        <div class="contact-content">
-            <h4 class="contact-title">CONTACT</h4>
-            <h4 class="my-email">majdbarakat<span>.</span>dev<span>@</span>gmail<span>.</span>com</h4>
-            <textarea id="textCopy">majdbarakat.dev@gmail.com</textarea>
-            <form id="my-form" action="https://formspree.io/f/xwkayzgz" method="POST">
-                <input autocomplete="off" type="text" id="name" name="name" placeholder="Name" required>
-        
-                <input type="email" id="email" name="email" placeholder="Email" required>
-        
-                <input autocomplete="off" type="text" id="subject" name="subject" placeholder="Subject" required>
-        
-                <textarea autocomplete="off" type ="text" name="message" id="message" cols="30" rows="10" placeholder="Message" required></textarea>
-
-                <button type="submit">Submit</button>
-                <div class="status-container">
-                    <div class="" id="icon"></div>
-                    <p id="status"></p>
-                </div>
-            </form>
+    <ul class="nav-menu">
+      <li id="Home"><a href="index.html">Home</a></li>
+      <!-- <li id="Projects"><a href="projects.html">Projects</a></li> -->
+      <li id="About"><a href="about.html">About</a></li>
+      <li id="ContactMe"><a href="contact.html">Contact Me</a></li>
+    </ul>
+    <header id="navbar">
+      <div class="navbar-container">
+        <div class="nav-left">
+          <a href="index.html" class="logo">mb</a>
+          <div class="light-dark-modes">
+            <div class="" id="light-btn"></div>
+            <div class="active" id="dark-btn"></div>
+          </div>
         </div>
+        <div class="nav-right">
+          <li class="social-media">
+            <a
+              target="_blank"
+              href="https://twitter.com/majdbarakat_dev"
+              class="twitter"
+            ></a>
+            <a
+              target="_blank"
+              href="https://github.com/MajdBarakat"
+              class="github"
+            ></a>
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/majd-barakat-a01119231/"
+              class="linkedin"
+            ></a>
+          </li>
+          <a class="burger" id="OFF">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Contact Page -->
+
+    <div class="contact-container">
+      <div class="contact-content">
+        <h4 class="contact-title">CONTACT</h4>
+        <h4 class="my-email">
+          majdbarakat<span>.</span>dev<span>@</span>gmail<span>.</span>com
+        </h4>
+        <textarea id="textCopy">majdbarakat.dev@gmail.com</textarea>
+        <form
+          id="my-form"
+          action="https://formspree.io/f/xwkayzgz"
+          method="POST"
+        >
+          <input
+            autocomplete="off"
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Name"
+            required
+          />
+
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email"
+            required
+          />
+
+          <input
+            autocomplete="off"
+            type="text"
+            id="subject"
+            name="subject"
+            placeholder="Subject"
+            required
+          />
+
+          <textarea
+            autocomplete="off"
+            type="text"
+            name="message"
+            id="message"
+            cols="30"
+            rows="10"
+            placeholder="Message"
+            required
+          ></textarea>
+
+          <button type="submit">Submit</button>
+          <div class="status-container">
+            <div class="" id="icon"></div>
+            <p id="status"></p>
+          </div>
+        </form>
+      </div>
     </div>
 
     <script>
-        var form = document.getElementById("my-form");
-        var icon = document.getElementById("icon");
-        async function handleSubmit(event) {
-          event.preventDefault();
-          var status = document.getElementById("status");
-          var data = new FormData(event.target);
-          fetch(event.target.action, {
-            method: form.method,
-            body: data,
-            headers: {
-                'Accept': 'application/json'
-            }
-          }).then(response => {
+      var form = document.getElementById("my-form");
+      var icon = document.getElementById("icon");
+      async function handleSubmit(event) {
+        event.preventDefault();
+        var status = document.getElementById("status");
+        var data = new FormData(event.target);
+        fetch(event.target.action, {
+          method: form.method,
+          body: data,
+          headers: {
+            Accept: "application/json",
+          },
+        })
+          .then((response) => {
             icon.classList.add("success");
             status.innerHTML = "Thanks for your submission!";
-            form.reset()
-          }).catch(error => {
+            form.reset();
+          })
+          .catch((error) => {
             icon.classList.add("error");
-            status.innerHTML = "Oops! There was a problem submitting your form"
+            status.innerHTML = "Oops! There was a problem submitting your form";
           });
-        }
-        form.addEventListener("submit", handleSubmit)
+      }
+      form.addEventListener("submit", handleSubmit);
     </script>
-</body>
-
+  </body>
 </html>
