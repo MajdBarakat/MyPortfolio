@@ -234,8 +234,7 @@ section {
 
 .page-selector {
   width: 4%;
-  height: 200px;
-  top: 38vh;
+  height: 100vh;
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -499,34 +498,50 @@ section {
 }
 
 .project-container #img-1 {
-  background: url("assets/img/Yawboard-Desktop.svg") no-repeat center
+  background: url("assets/img/Linkly-Desktop.png") no-repeat center
     center/contain;
 }
 .project-container #img-1-2 {
-  background: url("assets/img/Yawboard-Phone.svg") no-repeat center
+  background: url("assets/img/Linkly-Phone.png") no-repeat center
     center/contain;
 }
 .project-container #img-2 {
-  background: url("assets/img/Algorthm-Desktop.svg") no-repeat center
+  background: url("assets/img/Yawboard-Desktop.png") no-repeat center
+    center/contain;
+}
+.project-container #img-2-2 {
+  background: url("assets/img/Yawboard-Phone.png") no-repeat center
+    center/contain;
+}
+.project-container #img-3 {
+  background: url("assets/img/Algorthm-Desktop.png") no-repeat center
     center/contain;
 }
 /* .project-container #img-2-2{
     background: url("assets/img/Zero-Hunger-Phone.svg")no-repeat center center/contain;
 } */
-.project-container #img-3 {
-  background: url("assets/img/My-Portfolio-Desktop.svg") no-repeat center
-    center/contain;
-}
-.project-container #img-3-2 {
-  background: url("assets/img/My-Portfolio-Phone.svg") no-repeat center
-    center/contain;
-}
 .project-container #img-4 {
-  background: url("assets/img/Work-In-Progress-Desktop.svg") no-repeat center
+  background: url("assets/img/Metronome-Desktop.png") no-repeat center
     center/contain;
 }
 .project-container #img-4-2 {
-  background: url("assets/img/Work-In-Progress-Phone.svg") no-repeat center
+  background: url("assets/img/Metronome-Phone.png") no-repeat center
+    center/contain;
+}
+.project-container #img-5 {
+  background: url("assets/img/My-Portfolio-Desktop.png") no-repeat center
+    center/contain;
+}
+.project-container #img-5-2 {
+  background: url("assets/img/My-Portfolio-Phone.png") no-repeat center
+    center/contain;
+}
+.project-container #img-6 {
+  background: url("assets/img/Work-In-Progress-Desktop.png") no-repeat center
+    center/contain;
+}
+.project-container #img-6-2 {
+  background: url("assets/img/Work-In-Progress-Phone.png") no-repeat center
     center/contain;
 }
 /* ANIMATIONS -------------------------------------------*/

@@ -11,7 +11,7 @@ $(document).ready(function(){
     
     $('.container').fullpage({
         licenseKey:'CE258BFD-BC7446BF-977D67B5-29578706',
-        anchors: ['page-01', 'page-02', 'page-03', 'page-04','page-05'],
+        anchors: ['page-01', 'page-02', 'page-03', 'page-04','page-05', 'page-06', 'page-07'],
     });
     
     function getPageNumber(){
