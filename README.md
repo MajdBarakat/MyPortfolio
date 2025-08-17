@@ -1,4 +1,4 @@
-# MyPortfolio -- https://majdbarakat.dev/
+# MyPortfolio -- [https://majdbarakat.dev/](https://majdbarakat.github.io/MyPortfolio/)
 
 **ABOUT**
 
